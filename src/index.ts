@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import UserRouter from './routes/user.router';
 import AuthRouter from './routes/auth.router';
+import { authMiddleware } from './middleware/auth';
 
 dotenv.config();
 
@@ -13,6 +14,8 @@ app.use(express.json());
 // Routes
 app.use('/api/auth', AuthRouter);
 app.use('/api/user', UserRouter);
+
+// Middlewares
 
 app.listen(PORT, () => {
   console.log(`Server ON http://localhost:${PORT}`);

@@ -1,17 +1,18 @@
-import { Router } from "express";
-import UserController from "../controllers/user.controller";
+import { Router } from 'express';
+import UserController from '../controllers/user.controller';
+import { authMiddleware } from '../middleware/auth';
 
-const router = Router()
+const router = Router();
 
-router.get("/", UserController.getUsers )
-router.get("/:id", UserController.getUserById )
+router.get('/', authMiddleware, UserController.getUsers);
+router.get('/:id', authMiddleware, UserController.getUserById);
 
-router.post("/rol/", UserController.getUsersByRol)
+router.post('/rol/', authMiddleware, UserController.getUsersByRol);
 
-router.post("/", UserController.createUser)
+router.post('/', authMiddleware, UserController.createUser);
 
-router.put("/", UserController.updateUser)
+router.put('/', authMiddleware, UserController.updateUser);
 
-router.delete("/:id", UserController.deleteUser)
+router.delete('/:id', authMiddleware, UserController.deleteUser);
 
-export default router
+export default router;
