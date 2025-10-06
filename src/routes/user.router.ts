@@ -9,7 +9,7 @@ router.get('/:id', authMiddleware, UserController.getUserById);
 
 router.post('/rol/', authMiddleware, UserController.getUsersByRol);
 
-router.post('/', authMiddleware, UserController.createUser);
+router.post('/', UserController.createUser);
 
 router.put('/', authMiddleware, UserController.updateUser);
 
