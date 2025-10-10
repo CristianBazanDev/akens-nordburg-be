@@ -1,15 +1,13 @@
 import { Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '../services/prisma';
 import Messages from '../constants/messages';
 
 const JWT_SECRET = process.env.JWT_SECRET as string;
 if (!JWT_SECRET) {
   throw new Error('JWT_SECRET no está definido en las variables de entorno');
 }
-
-const prisma = new PrismaClient();
 
 const AuthController = {
   register: async (req: Request, res: Response): Promise<void> => {
