@@ -10,3 +10,6 @@ router.post('/indicators', authMiddleware, SettingsController.saveIndicatorSetti
 export default router;
 
 
+
+
+

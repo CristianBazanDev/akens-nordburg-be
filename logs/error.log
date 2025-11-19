@@ -1,0 +1,89 @@
+[ERROR] 19-11-2025 18:27:09: Error al inicializar la app: PrismaClientInitializationError: 
+Invalid `prisma.config.findFirst()` invocation in
+/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/src/index.ts:52:40
+
+  49 
+  50 async function main() {
+  51   try {
+→ 52     const config = await prisma.config.findFirst(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+[ERROR] 19-11-2025 18:54:06: Error in getNotifications
+[ERROR] 19-11-2025 18:54:06: Error in getUnreadCount
+[ERROR] 19-11-2025 18:54:10: Error in getNotifications
+[ERROR] 19-11-2025 18:54:10: Error in getUnreadCount
+[ERROR] 19-11-2025 18:54:10: Error in getNotifications
+[ERROR] 19-11-2025 18:54:10: Error in getUnreadCount
+[ERROR] 19-11-2025 18:54:14: Error in getNotifications
+[ERROR] 19-11-2025 18:54:14: Error in getUnreadCount
+[ERROR] 19-11-2025 18:54:15: Error in getNotifications
+[ERROR] 19-11-2025 18:54:15: Error in getUnreadCount
+[ERROR] 19-11-2025 18:54:17: Error in getNotifications
+[ERROR] 19-11-2025 18:54:17: Error in getUnreadCount
+[ERROR] 19-11-2025 18:54:18: Error in getNotifications
+[ERROR] 19-11-2025 18:54:18: Error in getUnreadCount
+[ERROR] 19-11-2025 18:54:37: Error in getTalentApplications
+[ERROR] 19-11-2025 18:54:46: Error in applyToPosition
+[ERROR] 19-11-2025 18:54:48: Error in getUnreadCount
+[ERROR] 19-11-2025 18:55:18: Error in getUnreadCount
+[ERROR] 19-11-2025 18:55:40: Error in getNotifications
+[ERROR] 19-11-2025 18:55:40: Error in getUnreadCount
+[ERROR] 19-11-2025 18:56:21: Error in getNotifications
+[ERROR] 19-11-2025 18:56:21: Error in getUnreadCount
+[ERROR] 19-11-2025 18:56:21: Error in getTalentApplications
+[ERROR] 19-11-2025 18:56:24: Error in getNotifications
+[ERROR] 19-11-2025 18:56:24: Error in getUnreadCount
+[ERROR] 19-11-2025 18:56:26: Error in getNotifications
+[ERROR] 19-11-2025 18:56:26: Error in getUnreadCount
+[ERROR] 19-11-2025 18:56:26: Error in getNotifications
+[ERROR] 19-11-2025 18:56:26: Error in getUnreadCount
+[ERROR] 19-11-2025 18:56:28: Error in getNotifications
+[ERROR] 19-11-2025 18:56:28: Error in getUnreadCount
+[ERROR] 19-11-2025 18:56:28: Error in getNotifications
+[ERROR] 19-11-2025 18:56:28: Error in getUnreadCount
+[ERROR] 19-11-2025 18:56:40: Error in getNotifications
+[ERROR] 19-11-2025 18:56:40: Error in getUnreadCount
+[ERROR] 19-11-2025 18:56:42: Error in applyToPosition
+[ERROR] 19-11-2025 18:56:59: Error in getNotifications
+[ERROR] 19-11-2025 18:56:59: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:00: Error in getNotifications
+[ERROR] 19-11-2025 18:57:00: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:00: Error in getNotifications
+[ERROR] 19-11-2025 18:57:00: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:01: Error in getNotifications
+[ERROR] 19-11-2025 18:57:01: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:01: Error in getNotifications
+[ERROR] 19-11-2025 18:57:01: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:02: Error in getNotifications
+[ERROR] 19-11-2025 18:57:02: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:03: Error in getNotifications
+[ERROR] 19-11-2025 18:57:03: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:03: Error in getNotifications
+[ERROR] 19-11-2025 18:57:03: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:04: Error in getNotifications
+[ERROR] 19-11-2025 18:57:04: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:04: Error in getNotifications
+[ERROR] 19-11-2025 18:57:04: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:05: Error in getNotifications
+[ERROR] 19-11-2025 18:57:05: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:13: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:13: Error in getNotifications
+[ERROR] 19-11-2025 18:57:15: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:15: Error in getNotifications
+[ERROR] 19-11-2025 18:57:45: Error in getUnreadCount
+[ERROR] 19-11-2025 18:58:15: Error in getUnreadCount
+[ERROR] 19-11-2025 18:58:29: Error in getTalentApplications
+[ERROR] 19-11-2025 18:58:36: Error in getNotifications
+[ERROR] 19-11-2025 18:58:36: Error in getUnreadCount
+[ERROR] 19-11-2025 18:58:37: Error in getNotifications
+[ERROR] 19-11-2025 18:58:37: Error in getUnreadCount
+[ERROR] 19-11-2025 18:58:38: Error in getNotifications
+[ERROR] 19-11-2025 18:58:38: Error in getUnreadCount
+[ERROR] 19-11-2025 18:58:38: Error in getNotifications
+[ERROR] 19-11-2025 18:58:38: Error in getUnreadCount
+[ERROR] 19-11-2025 18:59:08: Error in getUnreadCount
+[ERROR] 19-11-2025 18:59:38: Error in getUnreadCount
+[ERROR] 19-11-2025 18:59:46: Error in getTalentApplications
+[ERROR] 19-11-2025 18:59:47: Error in applyToPosition
+[ERROR] 19-11-2025 19:00:08: Error in getUnreadCount

@@ -499,3 +499,332 @@
 [INFO] 19-11-2025 17:28:43: Server ON http://localhost:3001
 [INFO] 19-11-2025 17:28:47: Profile retrieved for talent: 5
 [INFO] 19-11-2025 17:36:25: User logged in: admin@test.com
+[ERROR] 19-11-2025 18:27:09: Error al inicializar la app: PrismaClientInitializationError: 
+Invalid `prisma.config.findFirst()` invocation in
+/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/src/index.ts:52:40
+
+  49 
+  50 async function main() {
+  51   try {
+→ 52     const config = await prisma.config.findFirst(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+[INFO] 19-11-2025 18:28:05: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 18:28:05: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 18:28:05: Server ON http://localhost:3001
+[INFO] 19-11-2025 18:28:23: Admin stats retrieved
+[INFO] 19-11-2025 18:29:20: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 18:29:20: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 18:29:20: Server ON http://localhost:3001
+[INFO] 19-11-2025 18:30:14: User logged in: admin@test.com
+[INFO] 19-11-2025 18:30:14: Admin stats retrieved
+[INFO] 19-11-2025 18:30:47: Processes retrieved: 8
+[INFO] 19-11-2025 18:30:50: Processes retrieved: 8
+[INFO] 19-11-2025 18:30:59: Processes retrieved: 8
+[INFO] 19-11-2025 18:31:03: Processes retrieved: 8
+[INFO] 19-11-2025 18:31:07: Positions retrieved: 0
+[INFO] 19-11-2025 18:31:12: Positions retrieved: 0
+[INFO] 19-11-2025 18:31:33: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 18:31:33: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 18:31:33: Server ON http://localhost:3001
+[INFO] 19-11-2025 18:31:42: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 18:31:42: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 18:31:42: Server ON http://localhost:3001
+[INFO] 19-11-2025 18:31:47: Admin stats retrieved
+[INFO] 19-11-2025 18:31:48: Processes retrieved: 8
+[INFO] 19-11-2025 18:31:49: Positions retrieved: 0
+[INFO] 19-11-2025 18:32:01: Positions retrieved: 0
+[INFO] 19-11-2025 18:32:03: Positions retrieved: 0
+[INFO] 19-11-2025 18:32:26: Admin stats retrieved
+[INFO] 19-11-2025 18:32:28: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 18:32:31: Admin stats retrieved
+[INFO] 19-11-2025 18:32:50: Processes retrieved: 8
+[INFO] 19-11-2025 18:32:51: Processes retrieved: 8
+[INFO] 19-11-2025 18:32:52: Positions retrieved: 0
+[INFO] 19-11-2025 18:33:21: Position created: 11
+[INFO] 19-11-2025 18:33:21: Positions retrieved: 1
+[INFO] 19-11-2025 18:33:30: Position retrieved: 11
+[INFO] 19-11-2025 18:33:30: Processes retrieved: 0
+[INFO] 19-11-2025 18:33:32: Positions retrieved: 1
+[INFO] 19-11-2025 18:33:41: Admin stats retrieved
+[INFO] 19-11-2025 18:34:01: User registered: cristianbazandev@gmail.com
+[INFO] 19-11-2025 18:34:07: User logged in: cristianbazandev@gmail.com
+[WARN] 19-11-2025 18:34:07: Profile not found for talent: 23
+[INFO] 19-11-2025 18:34:07: Processes retrieved: 0
+[WARN] 19-11-2025 18:34:42: Profile not found for talent: 23
+[INFO] 19-11-2025 18:34:42: Processes retrieved: 0
+[WARN] 19-11-2025 18:34:58: Profile not found for talent: 23
+[INFO] 19-11-2025 18:35:05: Profile picture uploaded for user: 23
+[WARN] 19-11-2025 18:35:05: Profile not found for talent: 23
+[WARN] 19-11-2025 18:35:36: Profile not found for talent: 23
+[WARN] 19-11-2025 18:35:37: Profile not found for talent: 23
+[WARN] 19-11-2025 18:35:40: Profile not found for talent: 23
+[WARN] 19-11-2025 18:35:48: Profile not found for talent: 23
+[WARN] 19-11-2025 18:35:56: Profile not found for talent: 23
+[INFO] 19-11-2025 18:36:07: User logged in: cristianbazandev@gmail.com
+[WARN] 19-11-2025 18:36:07: Profile not found for talent: 23
+[INFO] 19-11-2025 18:36:07: Processes retrieved: 0
+[WARN] 19-11-2025 18:36:09: Profile not found for talent: 23
+[INFO] 19-11-2025 18:36:14: Profile picture uploaded for user: 23
+[WARN] 19-11-2025 18:36:14: Profile not found for talent: 23
+[WARN] 19-11-2025 18:36:20: Profile not found for talent: 23
+[WARN] 19-11-2025 18:37:42: Profile not found for talent: 23
+[INFO] 19-11-2025 18:37:42: CVs retrieved for talent: 23
+[INFO] 19-11-2025 18:41:17: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 18:41:17: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 18:41:17: Server ON http://localhost:3001
+[INFO] 19-11-2025 18:41:26: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 18:41:26: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 18:41:26: Server ON http://localhost:3001
+[INFO] 19-11-2025 18:41:33: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 18:41:33: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 18:41:33: Server ON http://localhost:3001
+[INFO] 19-11-2025 18:42:03: User logged in: cristianbazandev@gmail.com
+[WARN] 19-11-2025 18:42:04: Profile not found for talent: 23
+[INFO] 19-11-2025 18:42:04: Processes retrieved: 0
+[WARN] 19-11-2025 18:42:07: Profile not found for talent: 23
+[INFO] 19-11-2025 18:43:41: CVs retrieved for talent: 23
+[WARN] 19-11-2025 18:43:41: Profile not found for talent: 23
+[INFO] 19-11-2025 18:43:48: CV uploaded for talent: 23
+[INFO] 19-11-2025 18:43:48: CVs retrieved for talent: 23
+[WARN] 19-11-2025 18:43:48: Profile not found for talent: 23
+[INFO] 19-11-2025 18:44:23: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 18:44:23: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 18:44:23: Server ON http://localhost:3001
+[WARN] 19-11-2025 18:44:23: Profile not found for talent: 23
+[INFO] 19-11-2025 18:44:23: Processes retrieved: 0
+[INFO] 19-11-2025 18:44:32: Processes retrieved: 0
+[WARN] 19-11-2025 18:44:34: Profile not found for talent: 23
+[INFO] 19-11-2025 18:44:34: Processes retrieved: 0
+[WARN] 19-11-2025 18:44:42: Profile not found for talent: 23
+[INFO] 19-11-2025 18:44:42: Processes retrieved: 0
+[INFO] 19-11-2025 18:45:19: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 18:45:19: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 18:45:19: Server ON http://localhost:3001
+[INFO] 19-11-2025 18:45:51: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 18:45:51: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 18:45:51: Server ON http://localhost:3001
+[WARN] 19-11-2025 18:45:56: Profile not found for talent: 23
+[WARN] 19-11-2025 18:45:57: Profile not found for talent: 23
+[INFO] 19-11-2025 18:46:04: Profile picture uploaded for user: 23
+[WARN] 19-11-2025 18:46:04: Profile not found for talent: 23
+[WARN] 19-11-2025 18:46:10: Profile not found for talent: 23
+[INFO] 19-11-2025 18:46:10: Processes retrieved: 0
+[WARN] 19-11-2025 18:46:11: Profile not found for talent: 23
+[INFO] 19-11-2025 18:46:11: CVs retrieved for talent: 23
+[WARN] 19-11-2025 18:46:11: Profile not found for talent: 23
+[INFO] 19-11-2025 18:46:20: Profile picture uploaded for user: 23
+[WARN] 19-11-2025 18:46:20: Profile not found for talent: 23
+[WARN] 19-11-2025 18:46:22: Profile not found for talent: 23
+[WARN] 19-11-2025 18:46:25: Profile not found for talent: 23
+[INFO] 19-11-2025 18:46:25: Processes retrieved: 0
+[WARN] 19-11-2025 18:48:48: Profile not found for talent: 23
+[INFO] 19-11-2025 18:48:48: Processes retrieved: 0
+[INFO] 19-11-2025 18:48:51: Processes retrieved: 0
+[WARN] 19-11-2025 18:48:58: Profile not found for talent: 23
+[INFO] 19-11-2025 18:48:58: Processes retrieved: 0
+[WARN] 19-11-2025 18:48:59: Profile not found for talent: 23
+[INFO] 19-11-2025 18:48:59: Processes retrieved: 0
+[INFO] 19-11-2025 18:49:47: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 18:49:47: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 18:49:47: Server ON http://localhost:3001
+[INFO] 19-11-2025 18:49:48: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 18:49:48: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 18:49:48: Server ON http://localhost:3001
+[INFO] 19-11-2025 18:49:51: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 18:49:51: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 18:49:51: Server ON http://localhost:3001
+[INFO] 19-11-2025 18:49:55: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 18:49:55: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 18:49:55: Server ON http://localhost:3001
+[INFO] 19-11-2025 18:49:57: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 18:49:57: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 18:49:57: Server ON http://localhost:3001
+[INFO] 19-11-2025 18:53:56: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 18:53:56: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 18:53:56: Server ON http://localhost:3001
+[INFO] 19-11-2025 18:53:58: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 18:53:58: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 18:53:58: Server ON http://localhost:3001
+[INFO] 19-11-2025 18:54:04: User logged in: cristianbazandev@gmail.com
+[ERROR] 19-11-2025 18:54:06: Error in getNotifications
+[WARN] 19-11-2025 18:54:06: Profile not found for talent: 23
+[INFO] 19-11-2025 18:54:06: Processes retrieved: 0
+[ERROR] 19-11-2025 18:54:06: Error in getUnreadCount
+[INFO] 19-11-2025 18:54:09: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 18:54:09: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 18:54:09: Server ON http://localhost:3001
+[ERROR] 19-11-2025 18:54:10: Error in getNotifications
+[ERROR] 19-11-2025 18:54:10: Error in getUnreadCount
+[ERROR] 19-11-2025 18:54:10: Error in getNotifications
+[ERROR] 19-11-2025 18:54:10: Error in getUnreadCount
+[ERROR] 19-11-2025 18:54:14: Error in getNotifications
+[ERROR] 19-11-2025 18:54:14: Error in getUnreadCount
+[ERROR] 19-11-2025 18:54:15: Error in getNotifications
+[ERROR] 19-11-2025 18:54:15: Error in getUnreadCount
+[ERROR] 19-11-2025 18:54:17: Error in getNotifications
+[ERROR] 19-11-2025 18:54:17: Error in getUnreadCount
+[ERROR] 19-11-2025 18:54:18: Error in getNotifications
+[ERROR] 19-11-2025 18:54:18: Error in getUnreadCount
+[WARN] 19-11-2025 18:54:21: Profile not found for talent: 23
+[WARN] 19-11-2025 18:54:25: Profile not found for talent: 23
+[INFO] 19-11-2025 18:54:25: CVs retrieved for talent: 23
+[INFO] 19-11-2025 18:54:29: Positions retrieved: 7
+[ERROR] 19-11-2025 18:54:37: Error in getTalentApplications
+[INFO] 19-11-2025 18:54:37: Position retrieved: 10
+[ERROR] 19-11-2025 18:54:46: Error in applyToPosition
+[ERROR] 19-11-2025 18:54:48: Error in getUnreadCount
+[ERROR] 19-11-2025 18:55:18: Error in getUnreadCount
+[ERROR] 19-11-2025 18:55:40: Error in getNotifications
+[ERROR] 19-11-2025 18:55:40: Error in getUnreadCount
+[ERROR] 19-11-2025 18:56:21: Error in getNotifications
+[ERROR] 19-11-2025 18:56:21: Error in getUnreadCount
+[INFO] 19-11-2025 18:56:21: Position retrieved: 10
+[ERROR] 19-11-2025 18:56:21: Error in getTalentApplications
+[ERROR] 19-11-2025 18:56:24: Error in getNotifications
+[ERROR] 19-11-2025 18:56:24: Error in getUnreadCount
+[ERROR] 19-11-2025 18:56:26: Error in getNotifications
+[ERROR] 19-11-2025 18:56:26: Error in getUnreadCount
+[ERROR] 19-11-2025 18:56:26: Error in getNotifications
+[ERROR] 19-11-2025 18:56:26: Error in getUnreadCount
+[ERROR] 19-11-2025 18:56:28: Error in getNotifications
+[ERROR] 19-11-2025 18:56:28: Error in getUnreadCount
+[ERROR] 19-11-2025 18:56:28: Error in getNotifications
+[ERROR] 19-11-2025 18:56:28: Error in getUnreadCount
+[ERROR] 19-11-2025 18:56:40: Error in getNotifications
+[ERROR] 19-11-2025 18:56:40: Error in getUnreadCount
+[ERROR] 19-11-2025 18:56:42: Error in applyToPosition
+[ERROR] 19-11-2025 18:56:59: Error in getNotifications
+[ERROR] 19-11-2025 18:56:59: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:00: Error in getNotifications
+[ERROR] 19-11-2025 18:57:00: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:00: Error in getNotifications
+[ERROR] 19-11-2025 18:57:00: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:01: Error in getNotifications
+[ERROR] 19-11-2025 18:57:01: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:01: Error in getNotifications
+[ERROR] 19-11-2025 18:57:01: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:02: Error in getNotifications
+[ERROR] 19-11-2025 18:57:02: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:03: Error in getNotifications
+[ERROR] 19-11-2025 18:57:03: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:03: Error in getNotifications
+[ERROR] 19-11-2025 18:57:03: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:04: Error in getNotifications
+[ERROR] 19-11-2025 18:57:04: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:04: Error in getNotifications
+[ERROR] 19-11-2025 18:57:04: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:05: Error in getNotifications
+[ERROR] 19-11-2025 18:57:05: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:13: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:13: Error in getNotifications
+[ERROR] 19-11-2025 18:57:15: Error in getUnreadCount
+[ERROR] 19-11-2025 18:57:15: Error in getNotifications
+[INFO] 19-11-2025 18:57:17: Positions retrieved: 7
+[WARN] 19-11-2025 18:57:28: Profile not found for talent: 23
+[INFO] 19-11-2025 18:57:28: Processes retrieved: 0
+[WARN] 19-11-2025 18:57:33: Profile not found for talent: 23
+[INFO] 19-11-2025 18:57:35: CVs retrieved for talent: 23
+[WARN] 19-11-2025 18:57:35: Profile not found for talent: 23
+[INFO] 19-11-2025 18:57:44: Positions retrieved: 7
+[ERROR] 19-11-2025 18:57:45: Error in getUnreadCount
+[ERROR] 19-11-2025 18:58:15: Error in getUnreadCount
+[ERROR] 19-11-2025 18:58:29: Error in getTalentApplications
+[INFO] 19-11-2025 18:58:30: Position retrieved: 10
+[INFO] 19-11-2025 18:58:32: Positions retrieved: 7
+[WARN] 19-11-2025 18:58:34: Profile not found for talent: 23
+[INFO] 19-11-2025 18:58:34: Processes retrieved: 0
+[WARN] 19-11-2025 18:58:35: Profile not found for talent: 23
+[ERROR] 19-11-2025 18:58:36: Error in getNotifications
+[ERROR] 19-11-2025 18:58:36: Error in getUnreadCount
+[ERROR] 19-11-2025 18:58:37: Error in getNotifications
+[ERROR] 19-11-2025 18:58:37: Error in getUnreadCount
+[ERROR] 19-11-2025 18:58:38: Error in getNotifications
+[ERROR] 19-11-2025 18:58:38: Error in getUnreadCount
+[ERROR] 19-11-2025 18:58:38: Error in getNotifications
+[ERROR] 19-11-2025 18:58:38: Error in getUnreadCount
+[WARN] 19-11-2025 18:58:39: Profile not found for talent: 23
+[INFO] 19-11-2025 18:58:39: Processes retrieved: 0
+[WARN] 19-11-2025 18:58:41: Profile not found for talent: 23
+[INFO] 19-11-2025 18:58:41: CVs retrieved for talent: 23
+[INFO] 19-11-2025 18:58:41: Positions retrieved: 7
+[INFO] 19-11-2025 18:58:43: Processes retrieved: 0
+[WARN] 19-11-2025 18:58:45: Profile not found for talent: 23
+[INFO] 19-11-2025 18:58:46: Processes retrieved: 0
+[ERROR] 19-11-2025 18:59:08: Error in getUnreadCount
+[ERROR] 19-11-2025 18:59:38: Error in getUnreadCount
+[INFO] 19-11-2025 18:59:44: Positions retrieved: 7
+[ERROR] 19-11-2025 18:59:46: Error in getTalentApplications
+[INFO] 19-11-2025 18:59:46: Position retrieved: 10
+[ERROR] 19-11-2025 18:59:47: Error in applyToPosition
+[ERROR] 19-11-2025 19:00:08: Error in getUnreadCount
+[INFO] 19-11-2025 19:01:15: Application created: 1
+[WARN] 19-11-2025 19:01:19: Profile not found for talent: 23
+[INFO] 19-11-2025 19:01:19: Processes retrieved: 0
+[WARN] 19-11-2025 19:01:41: Failed login attempt for email: recruiter@test.com
+[WARN] 19-11-2025 19:01:44: Failed login attempt for email: recruiter@test.com
+[INFO] 19-11-2025 19:02:10: User logged in: recruiter@test.com
+[INFO] 19-11-2025 19:03:28: User logged in: client@test.com
+[INFO] 19-11-2025 19:03:28: Positions retrieved: 3
+[INFO] 19-11-2025 19:03:28: Processes retrieved: 2
+[INFO] 19-11-2025 19:03:35: Positions retrieved: 11
+[INFO] 19-11-2025 19:03:35: Positions retrieved: 11
+[INFO] 19-11-2025 19:03:44: Positions retrieved: 11
+[INFO] 19-11-2025 19:03:44: Positions retrieved: 11
+[INFO] 19-11-2025 19:05:20: Positions retrieved: 11
+[INFO] 19-11-2025 19:05:41: Positions retrieved: 11
+[INFO] 19-11-2025 19:05:42: Positions retrieved: 11
+[INFO] 19-11-2025 19:05:44: Positions retrieved: 11
+[INFO] 19-11-2025 19:05:44: Positions retrieved: 11
+[INFO] 19-11-2025 19:05:45: Positions retrieved: 3
+[INFO] 19-11-2025 19:05:51: Processes retrieved: 2
+[INFO] 19-11-2025 19:05:56: Positions retrieved: 3
+[INFO] 19-11-2025 19:05:56: Processes retrieved: 2
+[INFO] 19-11-2025 19:06:24: User logged in: recruiter@test.com
+[INFO] 19-11-2025 19:07:50: User logged in: admin@test.com
+[INFO] 19-11-2025 19:07:51: Admin stats retrieved
+[INFO] 19-11-2025 19:08:01: Processes retrieved: 8
+[INFO] 19-11-2025 19:08:02: Positions retrieved: 1
+[INFO] 19-11-2025 19:08:29: Admin stats retrieved
+[INFO] 19-11-2025 19:08:32: Admin stats retrieved
+[INFO] 19-11-2025 19:08:33: Processes retrieved: 8
+[INFO] 19-11-2025 19:08:34: Positions retrieved: 1
+[INFO] 19-11-2025 19:08:36: Admin stats retrieved
+[INFO] 19-11-2025 19:08:57: Processes retrieved: 8
+[INFO] 19-11-2025 19:08:58: Admin stats retrieved
+[INFO] 19-11-2025 19:09:10: User logged in: recruiter@test.com
+[INFO] 19-11-2025 19:10:29: Processes retrieved: 3
+[INFO] 19-11-2025 19:12:07: User logged in: recruiter@test.com
+[INFO] 19-11-2025 19:12:07: Processes retrieved: 3
+[INFO] 19-11-2025 19:12:13: Positions retrieved: 11
+[INFO] 19-11-2025 19:12:13: Positions retrieved: 11
+[INFO] 19-11-2025 19:12:19: Processes retrieved: 3
+[INFO] 19-11-2025 19:12:40: Processes retrieved: 3
+[INFO] 19-11-2025 19:13:10: User logged in: client@test.com
+[INFO] 19-11-2025 19:13:11: Positions retrieved: 3
+[INFO] 19-11-2025 19:13:11: Processes retrieved: 2
+[INFO] 19-11-2025 19:14:02: Position retrieved: 2
+[INFO] 19-11-2025 19:14:02: Processes retrieved: 1
+[INFO] 19-11-2025 19:18:41: User logged in: client@test.com
+[INFO] 19-11-2025 19:18:46: Processes retrieved: 2
+[INFO] 19-11-2025 19:18:48: Processes retrieved: 2
+[INFO] 19-11-2025 19:18:51: Processes retrieved: 2
+[INFO] 19-11-2025 19:20:21: Process retrieved: 2
+[INFO] 19-11-2025 19:20:44: Processes retrieved: 2
+[INFO] 19-11-2025 19:20:45: Process retrieved: 1
+[INFO] 19-11-2025 19:20:59: Processes retrieved: 2
+[INFO] 19-11-2025 19:21:11: Processes retrieved: 2
+[INFO] 19-11-2025 19:21:12: Process retrieved: 1
+[INFO] 19-11-2025 19:21:25: Processes retrieved: 2
+[INFO] 19-11-2025 19:21:46: User logged in: recruiter@test.com
+[INFO] 19-11-2025 19:21:48: User logged in: recruiter@test.com
+[INFO] 19-11-2025 19:21:49: Processes retrieved: 3
+[INFO] 19-11-2025 19:21:58: Positions retrieved: 11
+[INFO] 19-11-2025 19:21:58: Positions retrieved: 11
+[INFO] 19-11-2025 19:21:59: Processes retrieved: 3
+[INFO] 19-11-2025 19:22:03: Positions retrieved: 7
+[INFO] 19-11-2025 20:21:16: Processes retrieved: 3
+[INFO] 19-11-2025 20:24:03: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 20:24:03: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 20:24:03: Server ON http://localhost:3001

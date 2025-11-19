@@ -13,10 +13,24 @@ if (!JWT_SECRET) {
 const AuthController = {
   register: async (req: Request, res: Response): Promise<void> => {
     try {
-      const { email, password, name, rolId } = req.body;
+      const { email, password, name, role } = req.body;
 
-      if (!email || !password || !name || !rolId) {
+      if (!email || !password || !name) {
         res.status(400).json({ error: Messages.GENERAL.BAD_REQUEST });
+        return;
+      }
+
+      // Por defecto, asignar rol de "talent" si no se proporciona
+      const roleToAssign = role || 'talent';
+
+      // Buscar el rol en la base de datos
+      const roleRecord = await prisma.rol.findUnique({
+        where: { description: roleToAssign },
+      });
+
+      if (!roleRecord) {
+        logger.error(`Role not found: ${roleToAssign}`);
+        res.status(400).json({ error: `Rol inválido: ${roleToAssign}` });
         return;
       }
 
@@ -36,7 +50,7 @@ const AuthController = {
           email,
           password: hash,
           name,
-          rolId: parseInt(rolId),
+          rolId: roleRecord.id,
         },
         include: {
           rol: true,

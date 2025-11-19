@@ -80,7 +80,9 @@ export const uploadCV = multer({
 
 // Función helper para obtener la URL del archivo
 export const getFileUrl = (filename: string, type: 'profile' | 'cv'): string => {
-  const baseUrl = process.env.API_BASE_URL || 'http://localhost:3000';
+  // Usar el puerto del servidor o el API_BASE_URL si está configurado
+  const port = process.env.PORT || '3000';
+  const baseUrl = process.env.API_BASE_URL || `http://localhost:${port}`;
   const folder = type === 'profile' ? 'profile-pictures' : 'cvs';
   return `${baseUrl}/uploads/${folder}/${filename}`;
 };

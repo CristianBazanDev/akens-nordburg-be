@@ -34,6 +34,8 @@ model User {
   processesAsTalent    ProcessCandidate[]
   talentProfile        TalentProfile?
   talentCVs            TalentCV[]         @relation("UserTalentCVs")
+  applications         Application[]
+  notifications        Notification[]
 }
 
 model Rol {
@@ -59,6 +61,7 @@ model Position {
   updatedAt   DateTime @updatedAt
   
   processes   Process[]
+  applications Application[]
 }
 
 model Process {
@@ -179,4 +182,36 @@ model IndicatorConfig {
   updatedAt         DateTime @updatedAt
   
   @@unique([indicatorSettingId, type])
+}
+
+model Application {
+  id          Int      @id @default(autoincrement())
+  positionId  Int
+  position    Position @relation(fields: [positionId], references: [id], onDelete: Cascade)
+  talentId    Int
+  talent      User     @relation(fields: [talentId], references: [id], onDelete: Cascade)
+  status      String   @default("pending") // pending, reviewed, accepted, rejected
+  coverLetter String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([positionId, talentId])
+  @@index([positionId])
+  @@index([talentId])
+}
+
+model Notification {
+  id         Int      @id @default(autoincrement())
+  userId     Int
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type       String   // application_received, application_status, process_started, etc.
+  title      String
+  message    String
+  relatedId  Int?     // ID del recurso relacionado (application, process, etc.)
+  relatedType String? // Tipo del recurso relacionado
+  read       Boolean  @default(false)
+  createdAt  DateTime @default(now())
+
+  @@index([userId])
+  @@index([read])
 }

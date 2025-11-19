@@ -1346,3 +1346,135 @@ src/controllers/position.controller.ts(197,68): error TS2304: Cannot find name '
     at Module.load (node:internal/modules/cjs/loader:1441:32)
     at Function._load (node:internal/modules/cjs/loader:1263:12)
     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 19-11-2025 18:50:00: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/application.controller.ts[0m:[93m40[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'application' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m40[0m       const existingApplication = await prisma.application.findUnique({
+[7m  [0m [91m                                               ~~~~~~~~~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m55[0m:[93m40[0m - [91merror[0m[90m TS2339: [0mProperty 'application' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m55[0m       const application = await prisma.application.create({
+[7m  [0m [91m                                       ~~~~~~~~~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m130[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'application' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m130[0m       const applications = await prisma.application.findMany({
+[7m   [0m [91m                                        ~~~~~~~~~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m144[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'app' implicitly has an 'any' type.
+
+[7m144[0m       res.json(applications.map(app => ({
+[7m   [0m [91m                                ~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m195[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'application' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m195[0m       const applications = await prisma.application.findMany({
+[7m   [0m [91m                                        ~~~~~~~~~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m211[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'app' implicitly has an 'any' type.
+
+[7m211[0m       res.json(applications.map(app => ({
+[7m   [0m [91m                                ~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m247[0m:[93m40[0m - [91merror[0m[90m TS2339: [0mProperty 'application' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m247[0m       const application = await prisma.application.findUnique({
+[7m   [0m [91m                                       ~~~~~~~~~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m313[0m:[93m20[0m - [91merror[0m[90m TS2339: [0mProperty 'application' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m313[0m       await prisma.application.update({
+[7m   [0m [91m                   ~~~~~~~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 19-11-2025 18:51:57: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/application.controller.ts[0m:[93m40[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'application' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m40[0m       const existingApplication = await prisma.application.findUnique({
+[7m  [0m [91m                                               ~~~~~~~~~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m55[0m:[93m40[0m - [91merror[0m[90m TS2339: [0mProperty 'application' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m55[0m       const application = await prisma.application.create({
+[7m  [0m [91m                                       ~~~~~~~~~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m130[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'application' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m130[0m       const applications = await prisma.application.findMany({
+[7m   [0m [91m                                        ~~~~~~~~~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m144[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'app' implicitly has an 'any' type.
+
+[7m144[0m       res.json(applications.map(app => ({
+[7m   [0m [91m                                ~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m195[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'application' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m195[0m       const applications = await prisma.application.findMany({
+[7m   [0m [91m                                        ~~~~~~~~~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m211[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'app' implicitly has an 'any' type.
+
+[7m211[0m       res.json(applications.map(app => ({
+[7m   [0m [91m                                ~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m247[0m:[93m40[0m - [91merror[0m[90m TS2339: [0mProperty 'application' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m247[0m       const application = await prisma.application.findUnique({
+[7m   [0m [91m                                       ~~~~~~~~~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m313[0m:[93m20[0m - [91merror[0m[90m TS2339: [0mProperty 'application' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m313[0m       await prisma.application.update({
+[7m   [0m [91m                   ~~~~~~~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 19-11-2025 18:52:09: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/application.controller.ts[0m:[93m40[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'application' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m40[0m       const existingApplication = await prisma.application.findUnique({
+[7m  [0m [91m                                               ~~~~~~~~~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m55[0m:[93m40[0m - [91merror[0m[90m TS2339: [0mProperty 'application' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m55[0m       const application = await prisma.application.create({
+[7m  [0m [91m                                       ~~~~~~~~~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m130[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'application' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m130[0m       const applications = await prisma.application.findMany({
+[7m   [0m [91m                                        ~~~~~~~~~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m144[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'app' implicitly has an 'any' type.
+
+[7m144[0m       res.json(applications.map(app => ({
+[7m   [0m [91m                                ~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m195[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'application' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m195[0m       const applications = await prisma.application.findMany({
+[7m   [0m [91m                                        ~~~~~~~~~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m211[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'app' implicitly has an 'any' type.
+
+[7m211[0m       res.json(applications.map(app => ({
+[7m   [0m [91m                                ~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m247[0m:[93m40[0m - [91merror[0m[90m TS2339: [0mProperty 'application' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m247[0m       const application = await prisma.application.findUnique({
+[7m   [0m [91m                                       ~~~~~~~~~~~[0m
+[96msrc/controllers/application.controller.ts[0m:[93m313[0m:[93m20[0m - [91merror[0m[90m TS2339: [0mProperty 'application' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m313[0m       await prisma.application.update({
+[7m   [0m [91m                   ~~~~~~~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
