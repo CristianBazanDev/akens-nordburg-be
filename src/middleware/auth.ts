@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 import Messages from '../constants/messages';
 import dotenv from 'dotenv';
+import logger from '../services/logger';
 
 dotenv.config();
 const JWT_SECRET = process.env.JWT_SECRET as string;
@@ -21,6 +22,7 @@ export const authMiddleware = (
 ): void => {
   const authHeader = req.header('Authorization');
   if (!authHeader) {
+    logger.warn('Authentication attempt without token', { path: req.path, method: req.method });
     res.status(401).json({ error: Messages.GENERAL.UNAUTHORIZED });
     return;
   }
@@ -28,7 +30,7 @@ export const authMiddleware = (
   const token = authHeader.replace('Bearer ', '').trim();
 
   if (!token) {
-    console.log('no hay token');
+    logger.warn('Authentication attempt with empty token', { path: req.path, method: req.method });
     res.status(401).json({ error: Messages.GENERAL.UNAUTHORIZED });
     return;
   }
@@ -36,9 +38,10 @@ export const authMiddleware = (
   try {
     const decoded = jwt.verify(token, JWT_SECRET);
     req.user = decoded;
+    logger.debug('Token verified successfully', { userId: (decoded as any).userId, path: req.path });
     next();
   } catch (error) {
-    console.log('Error verificando token:', error);
+    logger.warn('Token verification failed', { error, path: req.path, method: req.method });
     res.status(401).json({ error: Messages.GENERAL.UNAUTHORIZED });
     return;
   }

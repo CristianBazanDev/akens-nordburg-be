@@ -240,3 +240,1109 @@
     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
     at Module.require (node:internal/modules/cjs/loader:1463:12)
+[ERROR] 11-10-2025 02:11:23: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/rol.router.ts[0m:[93m7[0m:[93m31[0m - [91merror[0m[90m TS2339: [0mProperty 'getRoles' does not exist on type '{ createRol: (req: Request<{}, {}, IRol, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>>) => Promise<...>; }'.
+
+[7m7[0m router.get('/', RolController.getRoles)
+[7m [0m [91m                              ~~~~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 11-10-2025 02:11:43: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/rol.controller.ts[0m:[93m4[0m:[93m10[0m - [91merror[0m[90m TS2724: [0m'"../../prisma/data/roles"' has no exported member named 'initialRol'. Did you mean 'initialRoles'?
+
+[7m4[0m import { initialRol } from "../../prisma/data/roles";
+[7m [0m [91m         ~~~~~~~~~~[0m
+
+  [96mprisma/data/roles.ts[0m:[93m1[0m:[93m14[0m
+    [7m1[0m export const initialRoles = [
+    [7m [0m [96m             ~~~~~~~~~~~~[0m
+    'initialRoles' is declared here.
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 11-10-2025 02:11:48: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/rol.controller.ts[0m:[93m4[0m:[93m10[0m - [91merror[0m[90m TS2724: [0m'"../../prisma/data/roles"' has no exported member named 'initialRol'. Did you mean 'initialRoles'?
+
+[7m4[0m import { initialRol } from "../../prisma/data/roles";
+[7m [0m [91m         ~~~~~~~~~~[0m
+
+  [96mprisma/data/roles.ts[0m:[93m1[0m:[93m14[0m
+    [7m1[0m export const initialRoles = [
+    [7m [0m [96m             ~~~~~~~~~~~~[0m
+    'initialRoles' is declared here.
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 11-10-2025 02:12:22: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/rol.controller.ts[0m:[93m4[0m:[93m10[0m - [91merror[0m[90m TS2724: [0m'"../../prisma/data/roles"' has no exported member named 'initialRol'. Did you mean 'initialRoles'?
+
+[7m4[0m import { initialRol } from "../../prisma/data/roles";
+[7m [0m [91m         ~~~~~~~~~~[0m
+
+  [96mprisma/data/roles.ts[0m:[93m1[0m:[93m14[0m
+    [7m1[0m export const initialRoles = [
+    [7m [0m [96m             ~~~~~~~~~~~~[0m
+    'initialRoles' is declared here.
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 11-10-2025 02:12:41: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/rol.controller.ts[0m:[93m4[0m:[93m10[0m - [91merror[0m[90m TS2724: [0m'"../../prisma/data/roles"' has no exported member named 'initialRol'. Did you mean 'initialRoles'?
+
+[7m4[0m import { initialRol } from "../../prisma/data/roles";
+[7m [0m [91m         ~~~~~~~~~~[0m
+
+  [96mprisma/data/roles.ts[0m:[93m1[0m:[93m14[0m
+    [7m1[0m export const initialRoles = [
+    [7m [0m [96m             ~~~~~~~~~~~~[0m
+    'initialRoles' is declared here.
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 22:48:42: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m95[0m:[93m47[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'email'. Either declare one or provide an initializer.
+
+[7m95[0m       logger.error('Error in login', { error, email });
+[7m  [0m [91m                                              ~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 22:48:54: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m95[0m:[93m47[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'email'. Either declare one or provide an initializer.
+
+[7m95[0m       logger.error('Error in login', { error, email });
+[7m  [0m [91m                                              ~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:00:18: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m95[0m:[93m47[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'email'. Either declare one or provide an initializer.
+
+[7m95[0m       logger.error('Error in login', { error, email });
+[7m  [0m [91m                                              ~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:00:36: TSError: ⨯ Unable to compile TypeScript:
+src/controllers/auth.controller.ts(95,47): error TS18004: No value exists in scope for the shorthand property 'email'. Either declare one or provide an initializer.
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:02:17: TSError: ⨯ Unable to compile TypeScript:
+src/controllers/auth.controller.ts(95,47): error TS18004: No value exists in scope for the shorthand property 'email'. Either declare one or provide an initializer.
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:02:35: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m95[0m:[93m47[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'email'. Either declare one or provide an initializer.
+
+[7m95[0m       logger.error('Error in login', { error, email });
+[7m  [0m [91m                                              ~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:03:07: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/position.controller.ts[0m:[93m78[0m:[93m69[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m78[0m       logger.error('Error in getPositionById', { error, positionId: id });
+[7m  [0m [91m                                                                    ~~[0m
+[96msrc/controllers/position.controller.ts[0m:[93m124[0m:[93m56[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'userId'. Either declare one or provide an initializer.
+
+[7m124[0m       logger.error('Error in createPosition', { error, userId, data: req.body });
+[7m   [0m [91m                                                       ~~~~~~[0m
+[96msrc/controllers/position.controller.ts[0m:[93m171[0m:[93m68[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m171[0m       logger.error('Error in updatePosition', { error, positionId: id, data: req.body });
+[7m   [0m [91m                                                                   ~~[0m
+[96msrc/controllers/position.controller.ts[0m:[93m197[0m:[93m68[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m197[0m       logger.error('Error in deletePosition', { error, positionId: id });
+[7m   [0m [91m                                                                   ~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:03:33: TSError: ⨯ Unable to compile TypeScript:
+src/controllers/position.controller.ts(78,69): error TS2304: Cannot find name 'id'.
+src/controllers/position.controller.ts(124,56): error TS18004: No value exists in scope for the shorthand property 'userId'. Either declare one or provide an initializer.
+src/controllers/position.controller.ts(171,68): error TS2304: Cannot find name 'id'.
+src/controllers/position.controller.ts(197,68): error TS2304: Cannot find name 'id'.
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:03:38: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/position.controller.ts[0m:[93m78[0m:[93m69[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m78[0m       logger.error('Error in getPositionById', { error, positionId: id });
+[7m  [0m [91m                                                                    ~~[0m
+[96msrc/controllers/position.controller.ts[0m:[93m124[0m:[93m56[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'userId'. Either declare one or provide an initializer.
+
+[7m124[0m       logger.error('Error in createPosition', { error, userId, data: req.body });
+[7m   [0m [91m                                                       ~~~~~~[0m
+[96msrc/controllers/position.controller.ts[0m:[93m171[0m:[93m68[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m171[0m       logger.error('Error in updatePosition', { error, positionId: id, data: req.body });
+[7m   [0m [91m                                                                   ~~[0m
+[96msrc/controllers/position.controller.ts[0m:[93m197[0m:[93m68[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m197[0m       logger.error('Error in deletePosition', { error, positionId: id });
+[7m   [0m [91m                                                                   ~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:03:44: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/position.controller.ts[0m:[93m78[0m:[93m69[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m78[0m       logger.error('Error in getPositionById', { error, positionId: id });
+[7m  [0m [91m                                                                    ~~[0m
+[96msrc/controllers/position.controller.ts[0m:[93m124[0m:[93m56[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'userId'. Either declare one or provide an initializer.
+
+[7m124[0m       logger.error('Error in createPosition', { error, userId, data: req.body });
+[7m   [0m [91m                                                       ~~~~~~[0m
+[96msrc/controllers/position.controller.ts[0m:[93m171[0m:[93m68[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m171[0m       logger.error('Error in updatePosition', { error, positionId: id, data: req.body });
+[7m   [0m [91m                                                                   ~~[0m
+[96msrc/controllers/position.controller.ts[0m:[93m197[0m:[93m68[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m197[0m       logger.error('Error in deletePosition', { error, positionId: id });
+[7m   [0m [91m                                                                   ~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:04:15: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/position.controller.ts[0m:[93m125[0m:[93m56[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'userId'. Either declare one or provide an initializer.
+
+[7m125[0m       logger.error('Error in createPosition', { error, userId, data: req.body });
+[7m   [0m [91m                                                       ~~~~~~[0m
+[96msrc/controllers/position.controller.ts[0m:[93m172[0m:[93m68[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m172[0m       logger.error('Error in updatePosition', { error, positionId: id, data: req.body });
+[7m   [0m [91m                                                                   ~~[0m
+[96msrc/controllers/position.controller.ts[0m:[93m198[0m:[93m68[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m198[0m       logger.error('Error in deletePosition', { error, positionId: id });
+[7m   [0m [91m                                                                   ~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:04:22: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/position.controller.ts[0m:[93m173[0m:[93m68[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m173[0m       logger.error('Error in updatePosition', { error, positionId: id, data: req.body });
+[7m   [0m [91m                                                                   ~~[0m
+[96msrc/controllers/position.controller.ts[0m:[93m199[0m:[93m68[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m199[0m       logger.error('Error in deletePosition', { error, positionId: id });
+[7m   [0m [91m                                                                   ~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:04:26: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/position.controller.ts[0m:[93m200[0m:[93m68[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m200[0m       logger.error('Error in deletePosition', { error, positionId: id });
+[7m   [0m [91m                                                                   ~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:04:32: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/process.controller.ts[0m:[93m161[0m:[93m67[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m161[0m       logger.error('Error in getProcessById', { error, processId: id });
+[7m   [0m [91m                                                                  ~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m222[0m:[93m55[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'userId'. Either declare one or provide an initializer.
+
+[7m222[0m       logger.error('Error in createProcess', { error, userId, data: req.body });
+[7m   [0m [91m                                                      ~~~~~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m279[0m:[93m66[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m279[0m       logger.error('Error in updateProcess', { error, processId: id, data: req.body });
+[7m   [0m [91m                                                                 ~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m305[0m:[93m66[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m305[0m       logger.error('Error in deleteProcess', { error, processId: id });
+[7m   [0m [91m                                                                 ~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m336[0m:[93m50[0m - [91merror[0m[90m TS2552: [0mCannot find name 'processId'. Did you mean 'process'?
+
+[7m336[0m       logger.error('Error in addStage', { error, processId, name, order });
+[7m   [0m [91m                                                 ~~~~~~~~~[0m
+
+  [96mnode_modules/@types/node/globals.d.ts[0m:[93m96[0m:[93m9[0m
+    [7m96[0m     var process: NodeJS.Process;
+    [7m  [0m [96m        ~~~~~~~[0m
+    'process' is declared here.
+[96msrc/controllers/process.controller.ts[0m:[93m336[0m:[93m67[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'order'. Either declare one or provide an initializer.
+
+[7m336[0m       logger.error('Error in addStage', { error, processId, name, order });
+[7m   [0m [91m                                                                  ~~~~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m392[0m:[93m54[0m - [91merror[0m[90m TS2552: [0mCannot find name 'processId'. Did you mean 'process'?
+
+[7m392[0m       logger.error('Error in addCandidate', { error, processId, data: req.body });
+[7m   [0m [91m                                                     ~~~~~~~~~[0m
+
+  [96mnode_modules/@types/node/globals.d.ts[0m:[93m96[0m:[93m9[0m
+    [7m96[0m     var process: NodeJS.Process;
+    [7m  [0m [96m        ~~~~~~~[0m
+    'process' is declared here.
+[96msrc/controllers/process.controller.ts[0m:[93m434[0m:[93m57[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'candidateId'. Either declare one or provide an initializer.
+
+[7m434[0m       logger.error('Error in updateCandidate', { error, candidateId, data: req.body });
+[7m   [0m [91m                                                        ~~~~~~~~~~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m460[0m:[93m57[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'candidateId'. Either declare one or provide an initializer.
+
+[7m460[0m       logger.error('Error in removeCandidate', { error, candidateId });
+[7m   [0m [91m                                                        ~~~~~~~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:04:41: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/process.controller.ts[0m:[93m223[0m:[93m55[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'userId'. Either declare one or provide an initializer.
+
+[7m223[0m       logger.error('Error in createProcess', { error, userId, data: req.body });
+[7m   [0m [91m                                                      ~~~~~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m280[0m:[93m66[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m280[0m       logger.error('Error in updateProcess', { error, processId: id, data: req.body });
+[7m   [0m [91m                                                                 ~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m306[0m:[93m66[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m306[0m       logger.error('Error in deleteProcess', { error, processId: id });
+[7m   [0m [91m                                                                 ~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m337[0m:[93m50[0m - [91merror[0m[90m TS2552: [0mCannot find name 'processId'. Did you mean 'process'?
+
+[7m337[0m       logger.error('Error in addStage', { error, processId, name, order });
+[7m   [0m [91m                                                 ~~~~~~~~~[0m
+
+  [96mnode_modules/@types/node/globals.d.ts[0m:[93m96[0m:[93m9[0m
+    [7m96[0m     var process: NodeJS.Process;
+    [7m  [0m [96m        ~~~~~~~[0m
+    'process' is declared here.
+[96msrc/controllers/process.controller.ts[0m:[93m337[0m:[93m67[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'order'. Either declare one or provide an initializer.
+
+[7m337[0m       logger.error('Error in addStage', { error, processId, name, order });
+[7m   [0m [91m                                                                  ~~~~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m393[0m:[93m54[0m - [91merror[0m[90m TS2552: [0mCannot find name 'processId'. Did you mean 'process'?
+
+[7m393[0m       logger.error('Error in addCandidate', { error, processId, data: req.body });
+[7m   [0m [91m                                                     ~~~~~~~~~[0m
+
+  [96mnode_modules/@types/node/globals.d.ts[0m:[93m96[0m:[93m9[0m
+    [7m96[0m     var process: NodeJS.Process;
+    [7m  [0m [96m        ~~~~~~~[0m
+    'process' is declared here.
+[96msrc/controllers/process.controller.ts[0m:[93m435[0m:[93m57[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'candidateId'. Either declare one or provide an initializer.
+
+[7m435[0m       logger.error('Error in updateCandidate', { error, candidateId, data: req.body });
+[7m   [0m [91m                                                        ~~~~~~~~~~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m461[0m:[93m57[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'candidateId'. Either declare one or provide an initializer.
+
+[7m461[0m       logger.error('Error in removeCandidate', { error, candidateId });
+[7m   [0m [91m                                                        ~~~~~~~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:04:51: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/process.controller.ts[0m:[93m281[0m:[93m66[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m281[0m       logger.error('Error in updateProcess', { error, processId: id, data: req.body });
+[7m   [0m [91m                                                                 ~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m307[0m:[93m66[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m307[0m       logger.error('Error in deleteProcess', { error, processId: id });
+[7m   [0m [91m                                                                 ~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m338[0m:[93m50[0m - [91merror[0m[90m TS2552: [0mCannot find name 'processId'. Did you mean 'process'?
+
+[7m338[0m       logger.error('Error in addStage', { error, processId, name, order });
+[7m   [0m [91m                                                 ~~~~~~~~~[0m
+
+  [96mnode_modules/@types/node/globals.d.ts[0m:[93m96[0m:[93m9[0m
+    [7m96[0m     var process: NodeJS.Process;
+    [7m  [0m [96m        ~~~~~~~[0m
+    'process' is declared here.
+[96msrc/controllers/process.controller.ts[0m:[93m338[0m:[93m67[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'order'. Either declare one or provide an initializer.
+
+[7m338[0m       logger.error('Error in addStage', { error, processId, name, order });
+[7m   [0m [91m                                                                  ~~~~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m394[0m:[93m54[0m - [91merror[0m[90m TS2552: [0mCannot find name 'processId'. Did you mean 'process'?
+
+[7m394[0m       logger.error('Error in addCandidate', { error, processId, data: req.body });
+[7m   [0m [91m                                                     ~~~~~~~~~[0m
+
+  [96mnode_modules/@types/node/globals.d.ts[0m:[93m96[0m:[93m9[0m
+    [7m96[0m     var process: NodeJS.Process;
+    [7m  [0m [96m        ~~~~~~~[0m
+    'process' is declared here.
+[96msrc/controllers/process.controller.ts[0m:[93m436[0m:[93m57[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'candidateId'. Either declare one or provide an initializer.
+
+[7m436[0m       logger.error('Error in updateCandidate', { error, candidateId, data: req.body });
+[7m   [0m [91m                                                        ~~~~~~~~~~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m462[0m:[93m57[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'candidateId'. Either declare one or provide an initializer.
+
+[7m462[0m       logger.error('Error in removeCandidate', { error, candidateId });
+[7m   [0m [91m                                                        ~~~~~~~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:04:59: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/process.controller.ts[0m:[93m308[0m:[93m66[0m - [91merror[0m[90m TS2304: [0mCannot find name 'id'.
+
+[7m308[0m       logger.error('Error in deleteProcess', { error, processId: id });
+[7m   [0m [91m                                                                 ~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m339[0m:[93m50[0m - [91merror[0m[90m TS2552: [0mCannot find name 'processId'. Did you mean 'process'?
+
+[7m339[0m       logger.error('Error in addStage', { error, processId, name, order });
+[7m   [0m [91m                                                 ~~~~~~~~~[0m
+
+  [96mnode_modules/@types/node/globals.d.ts[0m:[93m96[0m:[93m9[0m
+    [7m96[0m     var process: NodeJS.Process;
+    [7m  [0m [96m        ~~~~~~~[0m
+    'process' is declared here.
+[96msrc/controllers/process.controller.ts[0m:[93m339[0m:[93m67[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'order'. Either declare one or provide an initializer.
+
+[7m339[0m       logger.error('Error in addStage', { error, processId, name, order });
+[7m   [0m [91m                                                                  ~~~~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m395[0m:[93m54[0m - [91merror[0m[90m TS2552: [0mCannot find name 'processId'. Did you mean 'process'?
+
+[7m395[0m       logger.error('Error in addCandidate', { error, processId, data: req.body });
+[7m   [0m [91m                                                     ~~~~~~~~~[0m
+
+  [96mnode_modules/@types/node/globals.d.ts[0m:[93m96[0m:[93m9[0m
+    [7m96[0m     var process: NodeJS.Process;
+    [7m  [0m [96m        ~~~~~~~[0m
+    'process' is declared here.
+[96msrc/controllers/process.controller.ts[0m:[93m437[0m:[93m57[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'candidateId'. Either declare one or provide an initializer.
+
+[7m437[0m       logger.error('Error in updateCandidate', { error, candidateId, data: req.body });
+[7m   [0m [91m                                                        ~~~~~~~~~~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m463[0m:[93m57[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'candidateId'. Either declare one or provide an initializer.
+
+[7m463[0m       logger.error('Error in removeCandidate', { error, candidateId });
+[7m   [0m [91m                                                        ~~~~~~~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:05:05: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/process.controller.ts[0m:[93m340[0m:[93m50[0m - [91merror[0m[90m TS2552: [0mCannot find name 'processId'. Did you mean 'process'?
+
+[7m340[0m       logger.error('Error in addStage', { error, processId, name, order });
+[7m   [0m [91m                                                 ~~~~~~~~~[0m
+
+  [96mnode_modules/@types/node/globals.d.ts[0m:[93m96[0m:[93m9[0m
+    [7m96[0m     var process: NodeJS.Process;
+    [7m  [0m [96m        ~~~~~~~[0m
+    'process' is declared here.
+[96msrc/controllers/process.controller.ts[0m:[93m340[0m:[93m67[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'order'. Either declare one or provide an initializer.
+
+[7m340[0m       logger.error('Error in addStage', { error, processId, name, order });
+[7m   [0m [91m                                                                  ~~~~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m396[0m:[93m54[0m - [91merror[0m[90m TS2552: [0mCannot find name 'processId'. Did you mean 'process'?
+
+[7m396[0m       logger.error('Error in addCandidate', { error, processId, data: req.body });
+[7m   [0m [91m                                                     ~~~~~~~~~[0m
+
+  [96mnode_modules/@types/node/globals.d.ts[0m:[93m96[0m:[93m9[0m
+    [7m96[0m     var process: NodeJS.Process;
+    [7m  [0m [96m        ~~~~~~~[0m
+    'process' is declared here.
+[96msrc/controllers/process.controller.ts[0m:[93m438[0m:[93m57[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'candidateId'. Either declare one or provide an initializer.
+
+[7m438[0m       logger.error('Error in updateCandidate', { error, candidateId, data: req.body });
+[7m   [0m [91m                                                        ~~~~~~~~~~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m464[0m:[93m57[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'candidateId'. Either declare one or provide an initializer.
+
+[7m464[0m       logger.error('Error in removeCandidate', { error, candidateId });
+[7m   [0m [91m                                                        ~~~~~~~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:05:07: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/process.controller.ts[0m:[93m398[0m:[93m54[0m - [91merror[0m[90m TS2552: [0mCannot find name 'processId'. Did you mean 'process'?
+
+[7m398[0m       logger.error('Error in addCandidate', { error, processId, data: req.body });
+[7m   [0m [91m                                                     ~~~~~~~~~[0m
+
+  [96mnode_modules/@types/node/globals.d.ts[0m:[93m96[0m:[93m9[0m
+    [7m96[0m     var process: NodeJS.Process;
+    [7m  [0m [96m        ~~~~~~~[0m
+    'process' is declared here.
+[96msrc/controllers/process.controller.ts[0m:[93m440[0m:[93m57[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'candidateId'. Either declare one or provide an initializer.
+
+[7m440[0m       logger.error('Error in updateCandidate', { error, candidateId, data: req.body });
+[7m   [0m [91m                                                        ~~~~~~~~~~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m466[0m:[93m57[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'candidateId'. Either declare one or provide an initializer.
+
+[7m466[0m       logger.error('Error in removeCandidate', { error, candidateId });
+[7m   [0m [91m                                                        ~~~~~~~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:05:15: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/process.controller.ts[0m:[93m441[0m:[93m57[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'candidateId'. Either declare one or provide an initializer.
+
+[7m441[0m       logger.error('Error in updateCandidate', { error, candidateId, data: req.body });
+[7m   [0m [91m                                                        ~~~~~~~~~~~[0m
+[96msrc/controllers/process.controller.ts[0m:[93m467[0m:[93m57[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'candidateId'. Either declare one or provide an initializer.
+
+[7m467[0m       logger.error('Error in removeCandidate', { error, candidateId });
+[7m   [0m [91m                                                        ~~~~~~~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:05:19: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/process.controller.ts[0m:[93m468[0m:[93m57[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'candidateId'. Either declare one or provide an initializer.
+
+[7m468[0m       logger.error('Error in removeCandidate', { error, candidateId });
+[7m   [0m [91m                                                        ~~~~~~~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:05:25: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/talent.controller.ts[0m:[93m45[0m:[93m52[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m45[0m       logger.error('Error in getProfile', { error, talentId });
+[7m  [0m [91m                                                   ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m92[0m:[93m55[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m92[0m       logger.error('Error in upsertProfile', { error, talentId, data: req.body });
+[7m  [0m [91m                                                      ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m111[0m:[93m48[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m111[0m       logger.error('Error in getCVs', { error, talentId });
+[7m   [0m [91m                                               ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m150[0m:[93m50[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m150[0m       logger.error('Error in uploadCV', { error, talentId, fileName: data.fileName });
+[7m   [0m [91m                                                 ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m150[0m:[93m70[0m - [91merror[0m[90m TS2304: [0mCannot find name 'data'.
+
+[7m150[0m       logger.error('Error in uploadCV', { error, talentId, fileName: data.fileName });
+[7m   [0m [91m                                                                     ~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m183[0m:[93m50[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'cvId'. Either declare one or provide an initializer.
+
+[7m183[0m       logger.error('Error in deleteCV', { error, cvId });
+[7m   [0m [91m                                                 ~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:05:48: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/talent.controller.ts[0m:[93m45[0m:[93m52[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m45[0m       logger.error('Error in getProfile', { error, talentId });
+[7m  [0m [91m                                                   ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m92[0m:[93m55[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m92[0m       logger.error('Error in upsertProfile', { error, talentId, data: req.body });
+[7m  [0m [91m                                                      ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m111[0m:[93m48[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m111[0m       logger.error('Error in getCVs', { error, talentId });
+[7m   [0m [91m                                               ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m150[0m:[93m50[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m150[0m       logger.error('Error in uploadCV', { error, talentId, fileName: data.fileName });
+[7m   [0m [91m                                                 ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m150[0m:[93m70[0m - [91merror[0m[90m TS2304: [0mCannot find name 'data'.
+
+[7m150[0m       logger.error('Error in uploadCV', { error, talentId, fileName: data.fileName });
+[7m   [0m [91m                                                                     ~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m183[0m:[93m50[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'cvId'. Either declare one or provide an initializer.
+
+[7m183[0m       logger.error('Error in deleteCV', { error, cvId });
+[7m   [0m [91m                                                 ~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:05:55: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/talent.controller.ts[0m:[93m45[0m:[93m52[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m45[0m       logger.error('Error in getProfile', { error, talentId });
+[7m  [0m [91m                                                   ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m92[0m:[93m55[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m92[0m       logger.error('Error in upsertProfile', { error, talentId, data: req.body });
+[7m  [0m [91m                                                      ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m111[0m:[93m48[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m111[0m       logger.error('Error in getCVs', { error, talentId });
+[7m   [0m [91m                                               ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m150[0m:[93m50[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m150[0m       logger.error('Error in uploadCV', { error, talentId, fileName: data.fileName });
+[7m   [0m [91m                                                 ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m150[0m:[93m70[0m - [91merror[0m[90m TS2304: [0mCannot find name 'data'.
+
+[7m150[0m       logger.error('Error in uploadCV', { error, talentId, fileName: data.fileName });
+[7m   [0m [91m                                                                     ~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m183[0m:[93m50[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'cvId'. Either declare one or provide an initializer.
+
+[7m183[0m       logger.error('Error in deleteCV', { error, cvId });
+[7m   [0m [91m                                                 ~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:06:00: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/talent.controller.ts[0m:[93m45[0m:[93m52[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m45[0m       logger.error('Error in getProfile', { error, talentId });
+[7m  [0m [91m                                                   ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m92[0m:[93m55[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m92[0m       logger.error('Error in upsertProfile', { error, talentId, data: req.body });
+[7m  [0m [91m                                                      ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m111[0m:[93m48[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m111[0m       logger.error('Error in getCVs', { error, talentId });
+[7m   [0m [91m                                               ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m150[0m:[93m50[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m150[0m       logger.error('Error in uploadCV', { error, talentId, fileName: data.fileName });
+[7m   [0m [91m                                                 ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m150[0m:[93m70[0m - [91merror[0m[90m TS2304: [0mCannot find name 'data'.
+
+[7m150[0m       logger.error('Error in uploadCV', { error, talentId, fileName: data.fileName });
+[7m   [0m [91m                                                                     ~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m183[0m:[93m50[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'cvId'. Either declare one or provide an initializer.
+
+[7m183[0m       logger.error('Error in deleteCV', { error, cvId });
+[7m   [0m [91m                                                 ~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:06:07: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/talent.controller.ts[0m:[93m45[0m:[93m52[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m45[0m       logger.error('Error in getProfile', { error, talentId });
+[7m  [0m [91m                                                   ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m92[0m:[93m55[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m92[0m       logger.error('Error in upsertProfile', { error, talentId, data: req.body });
+[7m  [0m [91m                                                      ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m111[0m:[93m48[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m111[0m       logger.error('Error in getCVs', { error, talentId });
+[7m   [0m [91m                                               ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m150[0m:[93m50[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m150[0m       logger.error('Error in uploadCV', { error, talentId, fileName: data.fileName });
+[7m   [0m [91m                                                 ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m150[0m:[93m70[0m - [91merror[0m[90m TS2304: [0mCannot find name 'data'.
+
+[7m150[0m       logger.error('Error in uploadCV', { error, talentId, fileName: data.fileName });
+[7m   [0m [91m                                                                     ~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m183[0m:[93m50[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'cvId'. Either declare one or provide an initializer.
+
+[7m183[0m       logger.error('Error in deleteCV', { error, cvId });
+[7m   [0m [91m                                                 ~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:06:16: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/talent.controller.ts[0m:[93m93[0m:[93m55[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m93[0m       logger.error('Error in upsertProfile', { error, talentId, data: req.body });
+[7m  [0m [91m                                                      ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m112[0m:[93m48[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m112[0m       logger.error('Error in getCVs', { error, talentId });
+[7m   [0m [91m                                               ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m151[0m:[93m50[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m151[0m       logger.error('Error in uploadCV', { error, talentId, fileName: data.fileName });
+[7m   [0m [91m                                                 ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m151[0m:[93m70[0m - [91merror[0m[90m TS2304: [0mCannot find name 'data'.
+
+[7m151[0m       logger.error('Error in uploadCV', { error, talentId, fileName: data.fileName });
+[7m   [0m [91m                                                                     ~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m184[0m:[93m50[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'cvId'. Either declare one or provide an initializer.
+
+[7m184[0m       logger.error('Error in deleteCV', { error, cvId });
+[7m   [0m [91m                                                 ~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:06:24: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/talent.controller.ts[0m:[93m113[0m:[93m48[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m113[0m       logger.error('Error in getCVs', { error, talentId });
+[7m   [0m [91m                                               ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m152[0m:[93m50[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m152[0m       logger.error('Error in uploadCV', { error, talentId, fileName: data.fileName });
+[7m   [0m [91m                                                 ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m152[0m:[93m70[0m - [91merror[0m[90m TS2304: [0mCannot find name 'data'.
+
+[7m152[0m       logger.error('Error in uploadCV', { error, talentId, fileName: data.fileName });
+[7m   [0m [91m                                                                     ~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m185[0m:[93m50[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'cvId'. Either declare one or provide an initializer.
+
+[7m185[0m       logger.error('Error in deleteCV', { error, cvId });
+[7m   [0m [91m                                                 ~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:06:27: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/talent.controller.ts[0m:[93m153[0m:[93m50[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'talentId'. Either declare one or provide an initializer.
+
+[7m153[0m       logger.error('Error in uploadCV', { error, talentId, fileName: data.fileName });
+[7m   [0m [91m                                                 ~~~~~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m153[0m:[93m70[0m - [91merror[0m[90m TS2304: [0mCannot find name 'data'.
+
+[7m153[0m       logger.error('Error in uploadCV', { error, talentId, fileName: data.fileName });
+[7m   [0m [91m                                                                     ~~~~[0m
+[96msrc/controllers/talent.controller.ts[0m:[93m186[0m:[93m50[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'cvId'. Either declare one or provide an initializer.
+
+[7m186[0m       logger.error('Error in deleteCV', { error, cvId });
+[7m   [0m [91m                                                 ~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 18-11-2025 23:06:40: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/talent.controller.ts[0m:[93m188[0m:[93m50[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'cvId'. Either declare one or provide an initializer.
+
+[7m188[0m       logger.error('Error in deleteCV', { error, cvId });
+[7m   [0m [91m                                                 ~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 19-11-2025 16:36:39: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/settings.controller.ts[0m:[93m72[0m:[93m35[0m - [91merror[0m[90m TS2339: [0mProperty 'indicatorSetting' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m72[0m       let settings = await prisma.indicatorSetting.findFirst({
+[7m  [0m [91m                                  ~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/settings.controller.ts[0m:[93m133[0m:[93m34[0m - [91merror[0m[90m TS2339: [0mProperty 'indicatorSetting' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m133[0m       let setting = await prisma.indicatorSetting.findFirst({
+[7m   [0m [91m                                 ~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/settings.controller.ts[0m:[93m141[0m:[93m32[0m - [91merror[0m[90m TS2339: [0mProperty 'indicatorSetting' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m141[0m         setting = await prisma.indicatorSetting.create({
+[7m   [0m [91m                               ~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/settings.controller.ts[0m:[93m150[0m:[93m20[0m - [91merror[0m[90m TS2339: [0mProperty 'indicatorConfig' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m150[0m       await prisma.indicatorConfig.deleteMany({
+[7m   [0m [91m                   ~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/settings.controller.ts[0m:[93m176[0m:[93m20[0m - [91merror[0m[90m TS2339: [0mProperty 'indicatorConfig' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m176[0m       await prisma.indicatorConfig.createMany({
+[7m   [0m [91m                   ~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/settings.controller.ts[0m:[93m181[0m:[93m43[0m - [91merror[0m[90m TS2339: [0mProperty 'indicatorSetting' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m181[0m       const updatedSetting = await prisma.indicatorSetting.findUnique({
+[7m   [0m [91m                                          ~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/settings.controller.ts[0m:[93m202[0m:[93m32[0m - [91merror[0m[90m TS2339: [0mProperty 'indicatorSetting' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m202[0m   const setting = await prisma.indicatorSetting.create({
+[7m   [0m [91m                               ~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/settings.controller.ts[0m:[93m223[0m:[93m16[0m - [91merror[0m[90m TS2339: [0mProperty 'indicatorConfig' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m223[0m   await prisma.indicatorConfig.createMany({
+[7m   [0m [91m               ~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/settings.controller.ts[0m:[93m227[0m:[93m23[0m - [91merror[0m[90m TS2339: [0mProperty 'indicatorSetting' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m227[0m   return await prisma.indicatorSetting.findUnique({
+[7m   [0m [91m                      ~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 19-11-2025 16:36:47: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/stats.controller.ts[0m:[93m50[0m:[93m46[0m - [91merror[0m[90m TS2339: [0mProperty 'indicatorSetting' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m50[0m       const indicatorSettings = await prisma.indicatorSetting.findFirst({
+[7m  [0m [91m                                             ~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/stats.controller.ts[0m:[93m61[0m:[93m67[0m - [91merror[0m[90m TS7006: [0mParameter 'ind' implicitly has an 'any' type.
+
+[7m61[0m       const processesConfig = indicatorSettings?.indicators.find((ind) => ind.type === 'processes');
+[7m  [0m [91m                                                                  ~~~[0m
+[96msrc/controllers/stats.controller.ts[0m:[93m62[0m:[93m63[0m - [91merror[0m[90m TS7006: [0mParameter 'ind' implicitly has an 'any' type.
+
+[7m62[0m       const hiresConfig = indicatorSettings?.indicators.find((ind) => ind.type === 'hires');
+[7m  [0m [91m                                                              ~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 19-11-2025 16:37:05: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/settings.controller.ts[0m:[93m91[0m:[93m97[0m - [91merror[0m[90m TS18047: [0m'settings' is possibly 'null'.
+
+[7m91[0m       logger.info(`Indicator settings retrieved for year ${currentYear}`, { userId, settingsId: settings.id });
+[7m  [0m [91m                                                                                                ~~~~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 19-11-2025 16:37:08: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/settings.controller.ts[0m:[93m91[0m:[93m97[0m - [91merror[0m[90m TS18047: [0m'settings' is possibly 'null'.
+
+[7m91[0m       logger.info(`Indicator settings retrieved for year ${currentYear}`, { userId, settingsId: settings.id });
+[7m  [0m [91m                                                                                                ~~~~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 19-11-2025 16:37:10: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/settings.controller.ts[0m:[93m91[0m:[93m97[0m - [91merror[0m[90m TS18047: [0m'settings' is possibly 'null'.
+
+[7m91[0m       logger.info(`Indicator settings retrieved for year ${currentYear}`, { userId, settingsId: settings.id });
+[7m  [0m [91m                                                                                                ~~~~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[ERROR] 19-11-2025 17:23:07: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/upload.controller.ts[0m:[93m39[0m:[93m16[0m - [91merror[0m[90m TS2339: [0mProperty 'profilePicture' does not exist on type '{ id: number; createdAt: Date; updatedAt: Date; name: string; email: string; password: string; rolId: number; }'.
+
+[7m39[0m       if (user.profilePicture) {
+[7m  [0m [91m               ~~~~~~~~~~~~~~[0m
+[96msrc/controllers/upload.controller.ts[0m:[93m40[0m:[93m34[0m - [91merror[0m[90m TS2339: [0mProperty 'profilePicture' does not exist on type '{ id: number; createdAt: Date; updatedAt: Date; name: string; email: string; password: string; rolId: number; }'.
+
+[7m40[0m         const oldFileName = user.profilePicture.split('/').pop();
+[7m  [0m [91m                                 ~~~~~~~~~~~~~~[0m
+[96msrc/controllers/upload.controller.ts[0m:[93m51[0m:[93m17[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'profilePicture' does not exist in type '(Without<UserUpdateInput, UserUncheckedUpdateInput> & UserUncheckedUpdateInput) | (Without<...> & UserUpdateInput)'.
+
+[7m51[0m         data: { profilePicture: fileUrl },
+[7m  [0m [91m                ~~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m4231[0m:[93m5[0m
+    [7m4231[0m     data: XOR<UserUpdateInput, UserUncheckedUpdateInput>
+    [7m    [0m [96m    ~~~~[0m
+    The expected type comes from property 'data' which is declared here on type '{ select?: UserSelect<DefaultArgs> | null | undefined; omit?: UserOmit<DefaultArgs> | null | undefined; include?: UserInclude<DefaultArgs> | null | undefined; data: (Without<...> & UserUncheckedUpdateInput) | (Without<...> & UserUpdateInput); where: UserWhereUniqueInput; }'
+[96msrc/controllers/upload.controller.ts[0m:[93m59[0m:[93m37[0m - [91merror[0m[90m TS2339: [0mProperty 'profilePicture' does not exist on type '{ id: number; createdAt: Date; updatedAt: Date; name: string; email: string; password: string; rolId: number; }'.
+
+[7m59[0m         profilePicture: updatedUser.profilePicture,
+[7m  [0m [91m                                    ~~~~~~~~~~~~~~[0m
+[96msrc/controllers/upload.controller.ts[0m:[93m64[0m:[93m29[0m - [91merror[0m[90m TS2339: [0mProperty 'rol' does not exist on type '{ id: number; createdAt: Date; updatedAt: Date; name: string; email: string; password: string; rolId: number; }'.
+
+[7m64[0m           role: updatedUser.rol.description,
+[7m  [0m [91m                            ~~~[0m
+[96msrc/controllers/upload.controller.ts[0m:[93m65[0m:[93m39[0m - [91merror[0m[90m TS2339: [0mProperty 'profilePicture' does not exist on type '{ id: number; createdAt: Date; updatedAt: Date; name: string; email: string; password: string; rolId: number; }'.
+
+[7m65[0m           profilePicture: updatedUser.profilePicture,
+[7m  [0m [91m                                      ~~~~~~~~~~~~~~[0m
+
+    at createTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1839:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/cristianbazan/Documents/Proyectos/Desarrollo/an/akens-nordburg-be/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)

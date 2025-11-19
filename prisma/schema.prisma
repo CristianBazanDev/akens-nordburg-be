@@ -9,23 +9,174 @@ datasource db {
 
 model Config {
   id    Int  @id @default(autoincrement())
+  clientVerbose String      
   firstInitialize Boolean   @default(false)
   createdAt       DateTime  @default(now())
   updatedAt       DateTime  @updatedAt
-
 }
 
 model User {
-  id        Int      @id @default(autoincrement())
-  email     String   @unique
-  password  String
-  rol       Rol      @relation(fields: [rolId], references: [id])
-  rolId     Int
-  createdAt DateTime @default(now())
+  id             Int      @id @default(autoincrement())
+  name           String
+  email          String   @unique
+  password       String
+  profilePicture String?
+  currentCVId    Int?
+  currentCV      TalentCV? @relation("UserCurrentCV", fields: [currentCVId], references: [id], onDelete: SetNull)
+  rol            Rol      @relation(fields: [rolId], references: [id])
+  rolId          Int
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  
+  positionsAsClient    Position[]         @relation("ClientPositions")
+  processesAsClient    Process[]          @relation("ClientProcesses")
+  processesAsRecruiter Process[]          @relation("RecruiterProcesses")
+  processesAsTalent    ProcessCandidate[]
+  talentProfile        TalentProfile?
+  talentCVs            TalentCV[]         @relation("UserTalentCVs")
 }
 
 model Rol {
-  id    Int     @id @default(autoincrement())
-  description   String    @unique
-  users         User[]
+  id          Int     @id @default(autoincrement())
+  description String  @unique
+  users       User[]
+}
+
+model Position {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  requirements String[]
+  location    String?
+  salaryMin   Float?
+  salaryMax   Float?
+  currency    String?  @default("USD")
+  clientId    Int
+  client      User     @relation("ClientPositions", fields: [clientId], references: [id])
+  status      String   @default("draft")
+  keywords    String[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  processes   Process[]
+}
+
+model Process {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String?
+  status      String   @default("open")
+  positionId  Int
+  position    Position @relation(fields: [positionId], references: [id])
+  recruiterId Int
+  recruiter   User     @relation("RecruiterProcesses", fields: [recruiterId], references: [id])
+  clientId    Int
+  client      User     @relation("ClientProcesses", fields: [clientId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  stages      ProcessStage[]
+  candidates  ProcessCandidate[]
+}
+
+model ProcessStage {
+  id        Int      @id @default(autoincrement())
+  name      String
+  order     Int
+  processId Int
+  process   Process  @relation(fields: [processId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  
+  candidates ProcessCandidate[]
+}
+
+model ProcessCandidate {
+  id        Int      @id @default(autoincrement())
+  processId Int
+  process   Process  @relation(fields: [processId], references: [id], onDelete: Cascade)
+  talentId  Int
+  talent    User     @relation(fields: [talentId], references: [id])
+  stageId   Int
+  stage     ProcessStage @relation(fields: [stageId], references: [id])
+  status    String   @default("pending")
+  notes     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model TalentProfile {
+  id         Int      @id @default(autoincrement())
+  talentId   Int      @unique
+  talent     User     @relation(fields: [talentId], references: [id], onDelete: Cascade)
+  keywords   String[]
+  skills     String[]
+  experience String?
+  education  String?
+  updatedAt  DateTime @updatedAt
+}
+
+model TalentCV {
+  id         Int      @id @default(autoincrement())
+  talentId   Int
+  talent     User     @relation("UserTalentCVs", fields: [talentId], references: [id], onDelete: Cascade)
+  fileUrl    String
+  fileName   String
+  version    Int      @default(1)
+  uploadedAt DateTime @default(now())
+  
+  usersWithCurrentCV User[] @relation("UserCurrentCV")
+}
+
+model MonthlyGoal {
+  id             Int      @id @default(autoincrement())
+  month          Int
+  year           Int
+  targetProcesses Int
+  targetHires    Int
+  actualProcesses Int     @default(0)
+  actualHires    Int      @default(0)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  
+  @@unique([month, year])
+}
+
+model AnnualGoal {
+  id             Int      @id @default(autoincrement())
+  year           Int      @unique
+  targetProcesses Int
+  targetHires    Int
+  actualProcesses Int     @default(0)
+  actualHires    Int      @default(0)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model IndicatorSetting {
+  id        Int      @id @default(autoincrement())
+  year      Int
+  month     Int?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  indicators IndicatorConfig[]
+  
+  @@unique([year, month])
+}
+
+model IndicatorConfig {
+  id                Int      @id @default(autoincrement())
+  indicatorSettingId Int
+  indicatorSetting  IndicatorSetting @relation(fields: [indicatorSettingId], references: [id], onDelete: Cascade)
+  type              String
+  name              String
+  description       String?
+  enabled           Boolean  @default(false)
+  monthlyTarget     Float?
+  annualTarget      Float?
+  unit              String   @default("")
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  
+  @@unique([indicatorSettingId, type])
 }

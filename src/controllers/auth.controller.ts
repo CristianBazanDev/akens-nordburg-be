@@ -3,6 +3,7 @@ import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 import { prisma } from '../services/prisma';
 import Messages from '../constants/messages';
+import logger from '../services/logger';
 
 const JWT_SECRET = process.env.JWT_SECRET as string;
 if (!JWT_SECRET) {
@@ -12,7 +13,12 @@ if (!JWT_SECRET) {
 const AuthController = {
   register: async (req: Request, res: Response): Promise<void> => {
     try {
-      const { email, password, rol } = req.body;
+      const { email, password, name, rolId } = req.body;
+
+      if (!email || !password || !name || !rolId) {
+        res.status(400).json({ error: Messages.GENERAL.BAD_REQUEST });
+        return;
+      }
 
       const hash = await bcrypt.hash(password, 12);
 
@@ -21,21 +27,35 @@ const AuthController = {
       });
 
       if (existingUser) {
-        res.json(201).json({ message: Messages.USER.ALREADY_EXISTS });
+        res.status(409).json({ message: Messages.USER.ALREADY_EXISTS });
         return;
       }
 
-      await prisma.user.create({
+      const user = await prisma.user.create({
         data: {
           email,
           password: hash,
-          rol,
+          name,
+          rolId: parseInt(rolId),
+        },
+        include: {
+          rol: true,
         },
       });
 
-      res.json({ message: 'User registered' });
+      logger.info(`User registered: ${user.email}`, { userId: user.id, role: user.rol.description });
+      res.status(201).json({
+        message: Messages.AUTH.REGISTER_SUCCESS,
+        user: {
+          id: user.id,
+          name: user.name,
+          email: user.email,
+          role: user.rol.description,
+        },
+      });
     } catch (error) {
-      console.error(error);
+      logger.error('Error registering user', { error, email: req.body.email });
+      res.status(500).json({ error: Messages.GENERAL.INTERNAL_ERROR });
     }
   },
   login: async (req: Request, res: Response): Promise<void> => {
@@ -45,20 +65,44 @@ const AuthController = {
         where: {
           email: email,
         },
+        include: {
+          rol: true,
+          currentCV: true,
+        },
       });
 
       if (!user || !(await bcrypt.compare(password, user.password))) {
-        res.status(401).json({ error: 'Error on user or password' });
+        logger.warn(`Failed login attempt for email: ${email}`);
+        res.status(401).json({ error: Messages.AUTH.LOGIN_ERROR });
         return;
       }
 
-      const token = jwt.sign({ email: user.email }, JWT_SECRET, {
+      const token = jwt.sign({ userId: user.id, email: user.email }, JWT_SECRET, {
         expiresIn: '1h',
       });
 
-      res.json(token);
+      logger.info(`User logged in: ${user.email}`, { userId: user.id, role: user.rol.description });
+      res.json({
+        token,
+        user: {
+          id: user.id,
+          name: user.name,
+          email: user.email,
+          role: user.rol.description,
+          profilePicture: user.profilePicture,
+          currentCV: user.currentCV ? {
+            id: user.currentCV.id,
+            fileUrl: user.currentCV.fileUrl,
+            fileName: user.currentCV.fileName,
+            version: user.currentCV.version,
+            uploadedAt: user.currentCV.uploadedAt,
+          } : null,
+          createdAt: user.createdAt,
+        },
+      });
     } catch (error) {
-      console.error(error);
+      logger.error('Error in login', { error, email: req.body.email });
+      res.status(500).json({ error: Messages.GENERAL.INTERNAL_ERROR });
     }
   },
 };

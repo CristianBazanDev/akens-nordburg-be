@@ -16,6 +16,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.ts",
+    "seed": "ts-node src/scripts/seed.ts",
+    "verify": "ts-node src/scripts/verify.ts",
+    "check-tables": "ts-node src/scripts/checkTables.ts",
+    "migrate-cv": "ts-node src/scripts/migrateCurrentCV.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -24,11 +28,13 @@
   "description": "",
   "dependencies": {
     "@prisma/client": "^6.8.2",
+    "@types/multer": "^2.0.0",
     "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
     "winston": "^3.17.0"
   }
 }
