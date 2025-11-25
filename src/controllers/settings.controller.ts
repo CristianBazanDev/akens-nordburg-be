@@ -56,7 +56,6 @@ const SettingsController = {
         return;
       }
 
-      // Verificar que el usuario sea admin
       const user = await prisma.user.findUnique({
         where: { id: userId },
         include: { rol: true },
@@ -83,7 +82,6 @@ const SettingsController = {
         },
       });
 
-      // Si no existe, crear con valores por defecto
       if (!settings) {
         settings = await createDefaultSettings(currentYear);
       }
@@ -109,7 +107,6 @@ const SettingsController = {
         return;
       }
 
-      // Verificar que el usuario sea admin
       const user = await prisma.user.findUnique({
         where: { id: userId },
         include: { rol: true },
@@ -128,13 +125,11 @@ const SettingsController = {
         return;
       }
 
-      // Validar año
       if (year < 2000 || year > 2100) {
         res.status(400).json({ error: 'Invalid year. Must be between 2000 and 2100.' });
         return;
       }
 
-      // Buscar o crear el setting
       let setting = await prisma.indicatorSetting.findFirst({
         where: {
           year,
@@ -151,14 +146,12 @@ const SettingsController = {
         });
       }
 
-      // Eliminar indicadores existentes y crear nuevos
       await prisma.indicatorConfig.deleteMany({
         where: {
           indicatorSettingId: setting.id,
         },
       });
 
-      // Crear los nuevos indicadores
       const indicatorData = indicators.map((ind: any) => {
         const definition = INDICATOR_DEFINITIONS[ind.type] || {
           name: ind.name || ind.type,
@@ -182,7 +175,6 @@ const SettingsController = {
         data: indicatorData,
       });
 
-      // Recargar con relaciones
       const updatedSetting = await prisma.indicatorSetting.findUnique({
         where: { id: setting.id },
         include: {
@@ -198,6 +190,246 @@ const SettingsController = {
       res.json(updatedSetting);
     } catch (error) {
       logger.error('Error in saveIndicatorSettings', { error, userId: req.user?.userId, body: req.body });
+      res.status(500).json({ error: Messages.GENERAL.INTERNAL_ERROR });
+    }
+  },
+
+  getTenantConfig: async (req: AuthRequest, res: Response): Promise<void> => {
+    try {
+      const userId = req.user?.userId;
+      if (!userId) {
+        res.status(401).json({ error: Messages.GENERAL.UNAUTHORIZED });
+        return;
+      }
+
+      const tenant = req.query.tenant as string || req.headers['x-tenant'] as string || process.env.DEFAULT_TENANT || 'default';
+
+      const config = await prisma.config.findUnique({
+        where: { tenant },
+      });
+
+      if (!config) {
+        res.status(404).json({ error: 'Tenant configuration not found' });
+        return;
+      }
+
+      if (!config.isActive) {
+        res.status(403).json({ error: 'Tenant is not active' });
+        return;
+      }
+
+      logger.info(`Tenant config retrieved`, { userId, tenant });
+      res.json(config);
+    } catch (error) {
+      logger.error('Error in getTenantConfig', { error, userId: req.user?.userId });
+      res.status(500).json({ error: Messages.GENERAL.INTERNAL_ERROR });
+    }
+  },
+
+  updateTenantConfig: async (req: AuthRequest, res: Response): Promise<void> => {
+    try {
+      const userId = req.user?.userId;
+      if (!userId) {
+        res.status(401).json({ error: Messages.GENERAL.UNAUTHORIZED });
+        return;
+      }
+
+      const user = await prisma.user.findUnique({
+        where: { id: userId },
+        include: { rol: true },
+      });
+
+      if (!user || user.rol.description !== 'admin') {
+        logger.warn(`Non-admin user attempted to update tenant config: ${userId}`);
+        res.status(403).json({ error: 'Forbidden: Admin access required' });
+        return;
+      }
+
+      const { tenant } = req.params;
+      const {
+        clientVerbose,
+        logoUrl,
+        isActive,
+        primaryColor,
+        secondaryColor,
+        accentColor,
+        backgroundColor,
+        textColor,
+        textSecondaryColor,
+        themeConfig,
+        metadata,
+      } = req.body;
+
+      if (!tenant) {
+        res.status(400).json({ error: 'Tenant is required' });
+        return;
+      }
+
+      const existingConfig = await prisma.config.findUnique({
+        where: { tenant },
+      });
+
+      if (!existingConfig) {
+        res.status(404).json({ error: 'Tenant configuration not found' });
+        return;
+      }
+
+      const colorRegex = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
+      const colorsToValidate = { primaryColor, secondaryColor, accentColor, backgroundColor, textColor, textSecondaryColor };
+      
+      for (const [key, value] of Object.entries(colorsToValidate)) {
+        if (value && typeof value === 'string' && !colorRegex.test(value)) {
+          res.status(400).json({ error: `Invalid color format for ${key}. Must be a valid hex color (e.g., #FF0000 or #F00)` });
+          return;
+        }
+      }
+
+      const updatedConfig = await prisma.config.update({
+        where: { tenant },
+        data: {
+          ...(clientVerbose !== undefined && { clientVerbose }),
+          ...(logoUrl !== undefined && { logoUrl }),
+          ...(isActive !== undefined && { isActive }),
+          ...(primaryColor !== undefined && { primaryColor }),
+          ...(secondaryColor !== undefined && { secondaryColor }),
+          ...(accentColor !== undefined && { accentColor }),
+          ...(backgroundColor !== undefined && { backgroundColor }),
+          ...(textColor !== undefined && { textColor }),
+          ...(textSecondaryColor !== undefined && { textSecondaryColor }),
+          ...(themeConfig !== undefined && { themeConfig }),
+          ...(metadata !== undefined && { metadata }),
+        },
+      });
+
+      logger.info(`Tenant config updated`, { userId, tenant, configId: updatedConfig.id });
+      res.json(updatedConfig);
+    } catch (error) {
+      logger.error('Error in updateTenantConfig', { error, userId: req.user?.userId, body: req.body });
+      res.status(500).json({ error: Messages.GENERAL.INTERNAL_ERROR });
+    }
+  },
+
+  getAllTenants: async (req: AuthRequest, res: Response): Promise<void> => {
+    try {
+      const userId = req.user?.userId;
+      if (!userId) {
+        res.status(401).json({ error: Messages.GENERAL.UNAUTHORIZED });
+        return;
+      }
+
+      const user = await prisma.user.findUnique({
+        where: { id: userId },
+        include: { rol: true },
+      });
+
+      if (!user || user.rol.description !== 'admin') {
+        logger.warn(`Non-admin user attempted to list tenants: ${userId}`);
+        res.status(403).json({ error: 'Forbidden: Admin access required' });
+        return;
+      }
+
+      const tenants = await prisma.config.findMany({
+        orderBy: { createdAt: 'desc' },
+      });
+
+      logger.info(`All tenants retrieved`, { userId, count: tenants.length });
+      res.json(tenants);
+    } catch (error) {
+      logger.error('Error in getAllTenants', { error, userId: req.user?.userId });
+      res.status(500).json({ error: Messages.GENERAL.INTERNAL_ERROR });
+    }
+  },
+
+  createTenant: async (req: AuthRequest, res: Response): Promise<void> => {
+    try {
+      const userId = req.user?.userId;
+      if (!userId) {
+        res.status(401).json({ error: Messages.GENERAL.UNAUTHORIZED });
+        return;
+      }
+
+      const user = await prisma.user.findUnique({
+        where: { id: userId },
+        include: { rol: true },
+      });
+
+      if (!user || user.rol.description !== 'admin') {
+        logger.warn(`Non-admin user attempted to create tenant: ${userId}`);
+        res.status(403).json({ error: 'Forbidden: Admin access required' });
+        return;
+      }
+
+      const {
+        tenant,
+        clientId,
+        clientVerbose,
+        logoUrl,
+        primaryColor,
+        secondaryColor,
+        accentColor,
+        backgroundColor,
+        textColor,
+        textSecondaryColor,
+        themeConfig,
+        metadata,
+      } = req.body;
+
+      if (!tenant || !clientId || !clientVerbose) {
+        res.status(400).json({ error: 'Tenant, clientId, and clientVerbose are required' });
+        return;
+      }
+
+      const existingTenant = await prisma.config.findUnique({
+        where: { tenant },
+      });
+
+      if (existingTenant) {
+        res.status(409).json({ error: 'Tenant already exists' });
+        return;
+      }
+
+      const existingClientId = await prisma.config.findUnique({
+        where: { clientId },
+      });
+
+      if (existingClientId) {
+        res.status(409).json({ error: 'Client ID already exists' });
+        return;
+      }
+
+      const colorRegex = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
+      const colorsToValidate = { primaryColor, secondaryColor, accentColor, backgroundColor, textColor, textSecondaryColor };
+      
+      for (const [key, value] of Object.entries(colorsToValidate)) {
+        if (value && typeof value === 'string' && !colorRegex.test(value)) {
+          res.status(400).json({ error: `Invalid color format for ${key}. Must be a valid hex color (e.g., #FF0000 or #F00)` });
+          return;
+        }
+      }
+
+      const newTenant = await prisma.config.create({
+        data: {
+          tenant,
+          clientId,
+          clientVerbose,
+          logoUrl,
+          isActive: true,
+          firstInitialize: false,
+          primaryColor,
+          secondaryColor,
+          accentColor,
+          backgroundColor,
+          textColor,
+          textSecondaryColor,
+          themeConfig,
+          metadata,
+        },
+      });
+
+      logger.info(`New tenant created`, { userId, tenant, clientId, configId: newTenant.id });
+      res.status(201).json(newTenant);
+    } catch (error) {
+      logger.error('Error in createTenant', { error, userId: req.user?.userId, body: req.body });
       res.status(500).json({ error: Messages.GENERAL.INTERNAL_ERROR });
     }
   },
@@ -218,7 +450,7 @@ async function createDefaultSettings(year: number) {
       type,
       name: definition.name,
       description: definition.description,
-      enabled: type === 'processes' || type === 'hires', // Solo procesos y contrataciones habilitados por defecto
+      enabled: type === 'processes' || type === 'hires',
       monthlyTarget: type === 'processes' ? 50 : type === 'hires' ? 10 : null,
       annualTarget: type === 'processes' ? 600 : type === 'hires' ? 120 : null,
       unit: definition.unit,

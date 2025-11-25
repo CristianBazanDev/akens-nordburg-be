@@ -46,7 +46,6 @@ const StatsController = {
       const currentYear = currentDate.getFullYear();
       const currentMonth = currentDate.getMonth() + 1;
 
-      // Obtener configuraciones de indicadores
       const indicatorSettings = await prisma.indicatorSetting.findFirst({
         where: {
           year: currentYear,
@@ -57,15 +56,12 @@ const StatsController = {
         },
       });
 
-      // Obtener configuraciones de procesos y contrataciones
       const processesConfig = indicatorSettings?.indicators.find((ind) => ind.type === 'processes');
       const hiresConfig = indicatorSettings?.indicators.find((ind) => ind.type === 'hires');
 
-      // Calcular procesos y contrataciones actuales
       const actualProcesses = allProcesses.length;
       const actualHires = allProcesses.filter((p) => p.status === 'closed').length;
 
-      // Obtener o crear metas mensuales usando configuraciones
       let monthlyGoals = await prisma.monthlyGoal.findMany({
         where: {
           year: currentYear,
@@ -75,7 +71,6 @@ const StatsController = {
         },
       });
 
-      // Si hay configuraciones y no existe meta para el mes actual, crearla o actualizarla
       if (processesConfig || hiresConfig) {
         const currentMonthGoal = monthlyGoals.find((g) => g.month === currentMonth);
         const targetProcesses = processesConfig?.monthlyTarget 
@@ -85,7 +80,6 @@ const StatsController = {
           ? Math.round(hiresConfig.monthlyTarget) 
           : currentMonthGoal?.targetHires || 0;
 
-        // Calcular procesos y contrataciones del mes actual
         const monthStart = new Date(currentYear, currentMonth - 1, 1);
         const monthEnd = new Date(currentYear, currentMonth, 0, 23, 59, 59);
         const monthProcesses = allProcesses.filter(
@@ -94,7 +88,6 @@ const StatsController = {
         const monthHires = monthProcesses.filter((p) => p.status === 'closed').length;
 
         if (currentMonthGoal) {
-          // Actualizar meta existente con valores de configuración si están disponibles
           await prisma.monthlyGoal.update({
             where: { id: currentMonthGoal.id },
             data: {
@@ -105,7 +98,6 @@ const StatsController = {
             },
           });
         } else {
-          // Crear nueva meta para el mes actual
           await prisma.monthlyGoal.create({
             data: {
               month: currentMonth,
@@ -118,7 +110,6 @@ const StatsController = {
           });
         }
 
-        // Recargar metas mensuales
         monthlyGoals = await prisma.monthlyGoal.findMany({
           where: {
             year: currentYear,
@@ -129,7 +120,6 @@ const StatsController = {
         });
       }
 
-      // Obtener o crear metas anuales usando configuraciones
       let annualGoals = await prisma.annualGoal.findMany({
         where: {
           year: currentYear,
@@ -145,7 +135,6 @@ const StatsController = {
           ? Math.round(hiresConfig.annualTarget) 
           : currentAnnualGoal?.targetHires || 0;
 
-        // Calcular procesos y contrataciones del año actual
         const yearStart = new Date(currentYear, 0, 1);
         const yearEnd = new Date(currentYear, 11, 31, 23, 59, 59);
         const yearProcesses = allProcesses.filter(
@@ -154,7 +143,6 @@ const StatsController = {
         const yearHires = yearProcesses.filter((p) => p.status === 'closed').length;
 
         if (currentAnnualGoal) {
-          // Actualizar meta anual existente
           await prisma.annualGoal.update({
             where: { id: currentAnnualGoal.id },
             data: {
@@ -165,7 +153,6 @@ const StatsController = {
             },
           });
         } else {
-          // Crear nueva meta anual
           await prisma.annualGoal.create({
             data: {
               year: currentYear,
@@ -177,7 +164,6 @@ const StatsController = {
           });
         }
 
-        // Recargar metas anuales
         annualGoals = await prisma.annualGoal.findMany({
           where: {
             year: currentYear,

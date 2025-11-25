@@ -1,15 +1,10 @@
 import { prisma } from '../services/prisma';
 import logger from '../services/logger';
 
-/**
- * Script para migrar datos existentes y establecer currentCVId
- * para usuarios que ya tienen CVs subidos
- */
 async function migrateCurrentCV() {
   try {
     logger.info('Iniciando migración de currentCVId...');
 
-    // Obtener todos los usuarios que tienen CVs pero no tienen currentCVId establecido
     const usersWithCVs = await prisma.user.findMany({
       where: {
         currentCVId: null,
@@ -32,10 +27,8 @@ async function migrateCurrentCV() {
 
     for (const user of usersWithCVs) {
       if (user.talentCVs.length > 0) {
-        // Obtener el CV más reciente
         const latestCV = user.talentCVs[0];
 
-        // Actualizar el usuario con el currentCVId
         await prisma.user.update({
           where: { id: user.id },
           data: { currentCVId: latestCV.id },
@@ -55,7 +48,6 @@ async function migrateCurrentCV() {
   }
 }
 
-// Ejecutar si se llama directamente
 if (require.main === module) {
   migrateCurrentCV()
     .then(() => {

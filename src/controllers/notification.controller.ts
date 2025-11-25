@@ -5,7 +5,6 @@ import Messages from '../constants/messages';
 import logger from '../services/logger';
 
 const NotificationController = {
-  // Obtener notificaciones del usuario
   getNotifications: async (req: AuthRequest, res: Response): Promise<void> => {
     try {
       const userId = req.user?.userId;
@@ -37,7 +36,6 @@ const NotificationController = {
     }
   },
 
-  // Marcar notificación como leída
   markAsRead: async (req: AuthRequest, res: Response): Promise<void> => {
     try {
       const userId = req.user?.userId;
@@ -50,7 +48,6 @@ const NotificationController = {
 
       const notificationId = parseInt(id);
 
-      // Verificar que la notificación pertenece al usuario
       const notification = await prisma.notification.findUnique({
         where: { id: notificationId },
       });
@@ -72,7 +69,6 @@ const NotificationController = {
     }
   },
 
-  // Marcar todas las notificaciones como leídas
   markAllAsRead: async (req: AuthRequest, res: Response): Promise<void> => {
     try {
       const userId = req.user?.userId;
@@ -99,7 +95,6 @@ const NotificationController = {
     }
   },
 
-  // Obtener conteo de notificaciones no leídas
   getUnreadCount: async (req: AuthRequest, res: Response): Promise<void> => {
     try {
       const userId = req.user?.userId;

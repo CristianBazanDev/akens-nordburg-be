@@ -828,3 +828,389 @@ Please make sure your database server is running at `localhost:5432`.
 [INFO] 19-11-2025 20:24:03: La base de datos ya fue inicializada, saltando procesos.
 [INFO] 19-11-2025 20:24:03: Indicator settings already exist for year 2025
 [INFO] 19-11-2025 20:24:03: Server ON http://localhost:3001
+[INFO] 19-11-2025 21:04:31: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 21:04:31: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 21:04:31: Server ON http://localhost:3001
+[INFO] 19-11-2025 21:04:58: User logged in: admin@test.com
+[INFO] 19-11-2025 21:05:00: Admin stats retrieved
+[INFO] 19-11-2025 21:05:12: Admin stats retrieved
+[INFO] 19-11-2025 21:05:14: Processes retrieved: 8
+[INFO] 19-11-2025 21:05:15: Positions retrieved: 1
+[INFO] 19-11-2025 21:05:56: Admin stats retrieved
+[INFO] 19-11-2025 21:06:00: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:06:16: Indicator settings saved for year 2025
+[INFO] 19-11-2025 21:06:19: Admin stats retrieved
+[INFO] 19-11-2025 21:07:37: Admin stats retrieved
+[INFO] 19-11-2025 21:07:41: Admin stats retrieved
+[INFO] 19-11-2025 21:07:50: Admin stats retrieved
+[INFO] 19-11-2025 21:09:08: Admin stats retrieved
+[INFO] 19-11-2025 21:09:28: Admin stats retrieved
+[INFO] 19-11-2025 21:09:30: Admin stats retrieved
+[INFO] 19-11-2025 21:09:40: Positions retrieved: 11
+[INFO] 19-11-2025 21:10:01: Processes retrieved: 8
+[INFO] 19-11-2025 21:10:04: Positions retrieved: 1
+[INFO] 19-11-2025 21:10:06: Positions retrieved: 1
+[INFO] 19-11-2025 21:10:15: Admin stats retrieved
+[INFO] 19-11-2025 21:10:17: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:10:21: Admin stats retrieved
+[INFO] 19-11-2025 21:10:27: Processes retrieved: 8
+[INFO] 19-11-2025 21:12:41: Admin stats retrieved
+[INFO] 19-11-2025 21:12:46: Processes retrieved: 8
+[INFO] 19-11-2025 21:13:19: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:13:36: Indicator settings saved for year 2025
+[INFO] 19-11-2025 21:13:38: Admin stats retrieved
+[INFO] 19-11-2025 21:14:02: Processes retrieved: 8
+[INFO] 19-11-2025 21:14:06: Positions retrieved: 1
+[INFO] 19-11-2025 21:14:07: Processes retrieved: 8
+[INFO] 19-11-2025 21:14:13: Admin stats retrieved
+[INFO] 19-11-2025 21:14:13: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:14:14: Admin stats retrieved
+[INFO] 19-11-2025 21:14:18: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:14:24: Admin stats retrieved
+[INFO] 19-11-2025 21:15:28: Positions retrieved: 1
+[INFO] 19-11-2025 21:15:36: Processes retrieved: 8
+[INFO] 19-11-2025 21:15:39: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:15:51: Admin stats retrieved
+[INFO] 19-11-2025 21:17:24: Admin stats retrieved
+[INFO] 19-11-2025 21:17:24: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:17:24: Processes retrieved: 8
+[INFO] 19-11-2025 21:17:24: Positions retrieved: 11
+[INFO] 19-11-2025 21:18:45: Admin stats retrieved
+[INFO] 19-11-2025 21:18:45: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:18:45: Processes retrieved: 8
+[INFO] 19-11-2025 21:18:45: Positions retrieved: 11
+[INFO] 19-11-2025 21:18:46: Admin stats retrieved
+[INFO] 19-11-2025 21:18:46: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:18:46: Processes retrieved: 8
+[INFO] 19-11-2025 21:18:46: Positions retrieved: 11
+[INFO] 19-11-2025 21:18:48: Admin stats retrieved
+[INFO] 19-11-2025 21:18:48: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:18:48: Processes retrieved: 8
+[INFO] 19-11-2025 21:18:48: Positions retrieved: 11
+[INFO] 19-11-2025 21:18:49: Admin stats retrieved
+[INFO] 19-11-2025 21:18:49: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:18:49: Processes retrieved: 8
+[INFO] 19-11-2025 21:18:49: Positions retrieved: 11
+[INFO] 19-11-2025 21:18:51: Admin stats retrieved
+[INFO] 19-11-2025 21:18:51: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:18:51: Processes retrieved: 8
+[INFO] 19-11-2025 21:18:51: Positions retrieved: 11
+[INFO] 19-11-2025 21:19:01: Admin stats retrieved
+[INFO] 19-11-2025 21:19:01: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:19:01: Processes retrieved: 8
+[INFO] 19-11-2025 21:19:01: Positions retrieved: 11
+[INFO] 19-11-2025 21:19:02: Admin stats retrieved
+[INFO] 19-11-2025 21:19:02: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:19:02: Processes retrieved: 8
+[INFO] 19-11-2025 21:19:02: Positions retrieved: 11
+[INFO] 19-11-2025 21:19:09: Admin stats retrieved
+[INFO] 19-11-2025 21:19:09: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:19:09: Processes retrieved: 8
+[INFO] 19-11-2025 21:19:09: Positions retrieved: 11
+[INFO] 19-11-2025 21:19:09: Admin stats retrieved
+[INFO] 19-11-2025 21:19:09: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:19:09: Processes retrieved: 8
+[INFO] 19-11-2025 21:19:09: Positions retrieved: 11
+[INFO] 19-11-2025 21:19:10: Admin stats retrieved
+[INFO] 19-11-2025 21:19:10: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:19:10: Processes retrieved: 8
+[INFO] 19-11-2025 21:19:10: Positions retrieved: 11
+[INFO] 19-11-2025 21:19:11: Admin stats retrieved
+[INFO] 19-11-2025 21:19:11: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:19:11: Processes retrieved: 8
+[INFO] 19-11-2025 21:19:11: Positions retrieved: 11
+[INFO] 19-11-2025 21:19:17: Admin stats retrieved
+[INFO] 19-11-2025 21:19:17: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:19:18: Processes retrieved: 8
+[INFO] 19-11-2025 21:19:18: Positions retrieved: 11
+[INFO] 19-11-2025 21:19:18: Admin stats retrieved
+[INFO] 19-11-2025 21:19:18: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:19:18: Processes retrieved: 8
+[INFO] 19-11-2025 21:19:18: Positions retrieved: 11
+[INFO] 19-11-2025 21:19:41: Admin stats retrieved
+[INFO] 19-11-2025 21:19:41: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:19:41: Processes retrieved: 8
+[INFO] 19-11-2025 21:19:41: Positions retrieved: 11
+[INFO] 19-11-2025 21:19:42: Admin stats retrieved
+[INFO] 19-11-2025 21:19:42: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:19:42: Processes retrieved: 8
+[INFO] 19-11-2025 21:19:42: Positions retrieved: 11
+[INFO] 19-11-2025 21:19:43: Admin stats retrieved
+[INFO] 19-11-2025 21:19:43: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:19:43: Processes retrieved: 8
+[INFO] 19-11-2025 21:19:43: Positions retrieved: 11
+[INFO] 19-11-2025 21:19:45: Admin stats retrieved
+[INFO] 19-11-2025 21:19:45: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:19:45: Processes retrieved: 8
+[INFO] 19-11-2025 21:19:45: Positions retrieved: 11
+[INFO] 19-11-2025 21:19:50: Admin stats retrieved
+[INFO] 19-11-2025 21:19:50: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:19:50: Processes retrieved: 8
+[INFO] 19-11-2025 21:19:50: Positions retrieved: 11
+[INFO] 19-11-2025 21:19:51: Admin stats retrieved
+[INFO] 19-11-2025 21:19:51: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:19:51: Processes retrieved: 8
+[INFO] 19-11-2025 21:19:51: Positions retrieved: 11
+[INFO] 19-11-2025 21:20:04: Admin stats retrieved
+[INFO] 19-11-2025 21:20:04: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:20:04: Processes retrieved: 8
+[INFO] 19-11-2025 21:20:04: Positions retrieved: 11
+[INFO] 19-11-2025 21:26:09: Admin stats retrieved
+[INFO] 19-11-2025 21:26:09: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:26:09: Processes retrieved: 8
+[INFO] 19-11-2025 21:26:09: Positions retrieved: 11
+[INFO] 19-11-2025 21:26:10: Processes retrieved: 8
+[INFO] 19-11-2025 21:26:11: Process retrieved: 8
+[INFO] 19-11-2025 21:27:51: Processes retrieved: 8
+[INFO] 19-11-2025 21:27:59: Admin stats retrieved
+[INFO] 19-11-2025 21:27:59: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:27:59: Processes retrieved: 8
+[INFO] 19-11-2025 21:27:59: Positions retrieved: 11
+[INFO] 19-11-2025 21:28:01: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:28:04: Admin stats retrieved
+[INFO] 19-11-2025 21:28:04: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:28:04: Processes retrieved: 8
+[INFO] 19-11-2025 21:28:04: Positions retrieved: 11
+[INFO] 19-11-2025 21:30:57: Admin stats retrieved
+[INFO] 19-11-2025 21:30:57: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:30:57: Processes retrieved: 8
+[INFO] 19-11-2025 21:30:57: Positions retrieved: 11
+[INFO] 19-11-2025 21:31:14: Admin stats retrieved
+[INFO] 19-11-2025 21:31:14: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:31:14: Processes retrieved: 8
+[INFO] 19-11-2025 21:31:14: Positions retrieved: 11
+[INFO] 19-11-2025 21:31:50: Admin stats retrieved
+[INFO] 19-11-2025 21:31:50: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:31:50: Processes retrieved: 8
+[INFO] 19-11-2025 21:31:50: Positions retrieved: 11
+[INFO] 19-11-2025 21:33:33: Admin stats retrieved
+[INFO] 19-11-2025 21:33:33: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:33:33: Processes retrieved: 8
+[INFO] 19-11-2025 21:33:33: Positions retrieved: 11
+[INFO] 19-11-2025 21:33:35: Admin stats retrieved
+[INFO] 19-11-2025 21:33:35: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:33:35: Processes retrieved: 8
+[INFO] 19-11-2025 21:33:35: Positions retrieved: 11
+[INFO] 19-11-2025 21:33:36: Admin stats retrieved
+[INFO] 19-11-2025 21:33:36: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:33:36: Processes retrieved: 8
+[INFO] 19-11-2025 21:33:36: Positions retrieved: 11
+[INFO] 19-11-2025 21:39:12: Admin stats retrieved
+[INFO] 19-11-2025 21:39:12: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 21:39:12: Processes retrieved: 8
+[INFO] 19-11-2025 21:39:12: Positions retrieved: 11
+[INFO] 19-11-2025 21:50:19: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 19-11-2025 21:50:19: Indicator settings already exist for year 2025
+[INFO] 19-11-2025 21:50:19: Server ON http://localhost:3001
+[INFO] 19-11-2025 22:00:21: Admin stats retrieved
+[INFO] 19-11-2025 22:00:21: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:00:21: Processes retrieved: 8
+[INFO] 19-11-2025 22:00:21: Positions retrieved: 11
+[INFO] 19-11-2025 22:00:27: Processes retrieved: 8
+[INFO] 19-11-2025 22:00:28: Positions retrieved: 1
+[INFO] 19-11-2025 22:00:29: Admin stats retrieved
+[INFO] 19-11-2025 22:00:29: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:00:29: Processes retrieved: 8
+[INFO] 19-11-2025 22:00:29: Positions retrieved: 11
+[INFO] 19-11-2025 22:00:47: Processes retrieved: 8
+[INFO] 19-11-2025 22:00:52: Admin stats retrieved
+[INFO] 19-11-2025 22:00:52: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:00:52: Processes retrieved: 8
+[INFO] 19-11-2025 22:00:52: Positions retrieved: 11
+[INFO] 19-11-2025 22:00:54: Admin stats retrieved
+[INFO] 19-11-2025 22:00:54: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:00:54: Processes retrieved: 8
+[INFO] 19-11-2025 22:00:54: Positions retrieved: 11
+[INFO] 19-11-2025 22:01:15: Admin stats retrieved
+[INFO] 19-11-2025 22:01:15: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:01:15: Processes retrieved: 8
+[INFO] 19-11-2025 22:01:15: Positions retrieved: 11
+[INFO] 19-11-2025 22:01:23: Admin stats retrieved
+[INFO] 19-11-2025 22:01:23: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:01:23: Processes retrieved: 8
+[INFO] 19-11-2025 22:01:23: Positions retrieved: 11
+[INFO] 19-11-2025 22:01:25: Admin stats retrieved
+[INFO] 19-11-2025 22:01:25: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:01:25: Processes retrieved: 8
+[INFO] 19-11-2025 22:01:25: Positions retrieved: 11
+[INFO] 19-11-2025 22:02:13: Admin stats retrieved
+[INFO] 19-11-2025 22:02:13: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:02:13: Processes retrieved: 8
+[INFO] 19-11-2025 22:02:13: Positions retrieved: 11
+[INFO] 19-11-2025 22:02:14: Admin stats retrieved
+[INFO] 19-11-2025 22:02:14: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:02:14: Processes retrieved: 8
+[INFO] 19-11-2025 22:02:14: Positions retrieved: 11
+[INFO] 19-11-2025 22:03:28: Admin stats retrieved
+[INFO] 19-11-2025 22:03:28: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:03:28: Processes retrieved: 8
+[INFO] 19-11-2025 22:03:28: Positions retrieved: 11
+[INFO] 19-11-2025 22:03:52: Admin stats retrieved
+[INFO] 19-11-2025 22:03:52: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:03:52: Processes retrieved: 8
+[INFO] 19-11-2025 22:03:52: Positions retrieved: 11
+[INFO] 19-11-2025 22:03:57: Admin stats retrieved
+[INFO] 19-11-2025 22:03:57: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:03:57: Processes retrieved: 8
+[INFO] 19-11-2025 22:03:57: Positions retrieved: 11
+[INFO] 19-11-2025 22:04:04: Admin stats retrieved
+[INFO] 19-11-2025 22:04:04: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:04:04: Processes retrieved: 8
+[INFO] 19-11-2025 22:04:04: Positions retrieved: 11
+[INFO] 19-11-2025 22:04:05: Processes retrieved: 8
+[INFO] 19-11-2025 22:04:07: Positions retrieved: 1
+[INFO] 19-11-2025 22:04:34: Admin stats retrieved
+[INFO] 19-11-2025 22:04:34: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:04:34: Processes retrieved: 8
+[INFO] 19-11-2025 22:04:34: Positions retrieved: 11
+[INFO] 19-11-2025 22:04:46: Processes retrieved: 8
+[INFO] 19-11-2025 22:04:51: Admin stats retrieved
+[INFO] 19-11-2025 22:04:51: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:04:51: Processes retrieved: 8
+[INFO] 19-11-2025 22:04:51: Positions retrieved: 11
+[WARN] 19-11-2025 22:05:21: Token verification failed
+[INFO] 19-11-2025 22:05:40: User logged in: admin@test.com
+[INFO] 19-11-2025 22:05:41: Admin stats retrieved
+[INFO] 19-11-2025 22:05:41: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:05:41: Processes retrieved: 8
+[INFO] 19-11-2025 22:05:41: Positions retrieved: 11
+[INFO] 19-11-2025 22:28:28: Admin stats retrieved
+[INFO] 19-11-2025 22:28:28: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:28:28: Processes retrieved: 8
+[INFO] 19-11-2025 22:28:29: Positions retrieved: 11
+[INFO] 19-11-2025 22:28:52: Admin stats retrieved
+[INFO] 19-11-2025 22:28:52: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:28:52: Processes retrieved: 8
+[INFO] 19-11-2025 22:28:52: Positions retrieved: 11
+[INFO] 19-11-2025 22:29:10: Admin stats retrieved
+[INFO] 19-11-2025 22:29:10: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:29:10: Processes retrieved: 8
+[INFO] 19-11-2025 22:29:10: Positions retrieved: 11
+[INFO] 19-11-2025 22:35:07: Admin stats retrieved
+[INFO] 19-11-2025 22:35:07: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:35:07: Processes retrieved: 8
+[INFO] 19-11-2025 22:35:07: Positions retrieved: 11
+[INFO] 19-11-2025 22:35:14: Admin stats retrieved
+[INFO] 19-11-2025 22:35:14: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:35:14: Processes retrieved: 8
+[INFO] 19-11-2025 22:35:14: Positions retrieved: 11
+[INFO] 19-11-2025 22:35:22: Admin stats retrieved
+[INFO] 19-11-2025 22:35:22: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:35:23: Processes retrieved: 8
+[INFO] 19-11-2025 22:35:23: Positions retrieved: 11
+[INFO] 19-11-2025 22:35:29: Admin stats retrieved
+[INFO] 19-11-2025 22:35:29: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:35:29: Processes retrieved: 8
+[INFO] 19-11-2025 22:35:29: Positions retrieved: 11
+[INFO] 19-11-2025 22:36:20: Admin stats retrieved
+[INFO] 19-11-2025 22:36:20: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:36:20: Processes retrieved: 8
+[INFO] 19-11-2025 22:36:20: Positions retrieved: 11
+[INFO] 19-11-2025 22:36:38: Admin stats retrieved
+[INFO] 19-11-2025 22:36:38: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:36:38: Processes retrieved: 8
+[INFO] 19-11-2025 22:36:38: Positions retrieved: 11
+[INFO] 19-11-2025 22:36:44: Admin stats retrieved
+[INFO] 19-11-2025 22:36:44: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:36:44: Processes retrieved: 8
+[INFO] 19-11-2025 22:36:44: Positions retrieved: 11
+[INFO] 19-11-2025 22:36:53: Admin stats retrieved
+[INFO] 19-11-2025 22:36:53: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:36:53: Processes retrieved: 8
+[INFO] 19-11-2025 22:36:53: Positions retrieved: 11
+[INFO] 19-11-2025 22:37:14: Admin stats retrieved
+[INFO] 19-11-2025 22:37:14: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:37:14: Processes retrieved: 8
+[INFO] 19-11-2025 22:37:14: Positions retrieved: 11
+[INFO] 19-11-2025 22:38:33: Admin stats retrieved
+[INFO] 19-11-2025 22:38:33: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:38:33: Processes retrieved: 8
+[INFO] 19-11-2025 22:38:33: Positions retrieved: 11
+[INFO] 19-11-2025 22:38:37: Processes retrieved: 8
+[INFO] 19-11-2025 22:38:38: Admin stats retrieved
+[INFO] 19-11-2025 22:38:39: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:38:39: Processes retrieved: 8
+[INFO] 19-11-2025 22:38:39: Positions retrieved: 11
+[INFO] 19-11-2025 22:38:40: Processes retrieved: 8
+[INFO] 19-11-2025 22:38:41: Positions retrieved: 1
+[INFO] 19-11-2025 22:39:06: Admin stats retrieved
+[INFO] 19-11-2025 22:39:06: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:39:06: Processes retrieved: 8
+[INFO] 19-11-2025 22:39:06: Positions retrieved: 11
+[INFO] 19-11-2025 22:39:08: Processes retrieved: 8
+[INFO] 19-11-2025 22:39:09: Positions retrieved: 1
+[INFO] 19-11-2025 22:39:14: Admin stats retrieved
+[INFO] 19-11-2025 22:39:14: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:39:14: Processes retrieved: 8
+[INFO] 19-11-2025 22:39:14: Positions retrieved: 11
+[INFO] 19-11-2025 22:39:18: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:39:22: Admin stats retrieved
+[INFO] 19-11-2025 22:39:22: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:39:22: Processes retrieved: 8
+[INFO] 19-11-2025 22:39:22: Positions retrieved: 11
+[INFO] 19-11-2025 22:39:27: Admin stats retrieved
+[INFO] 19-11-2025 22:39:27: Indicator settings retrieved for year 2025
+[INFO] 19-11-2025 22:39:27: Processes retrieved: 8
+[INFO] 19-11-2025 22:39:27: Positions retrieved: 11
+[INFO] 19-11-2025 22:40:17: Processes retrieved: 8
+[INFO] 19-11-2025 22:40:21: Process retrieved: 8
+[INFO] 19-11-2025 22:40:22: Processes retrieved: 8
+[INFO] 19-11-2025 22:40:24: Process retrieved: 7
+[INFO] 19-11-2025 22:40:38: Processes retrieved: 8
+[INFO] 20-11-2025 15:27:19: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 20-11-2025 15:27:19: Indicator settings already exist for year 2025
+[INFO] 20-11-2025 15:27:19: Server ON http://localhost:3001
+[INFO] 20-11-2025 15:28:24: User registered: cristian@gmail.com
+[INFO] 20-11-2025 15:28:35: User logged in: cristian@gmail.com
+[WARN] 20-11-2025 15:28:38: Profile not found for talent: 24
+[INFO] 20-11-2025 15:28:38: Processes retrieved: 0
+[WARN] 20-11-2025 15:28:41: Profile not found for talent: 24
+[WARN] 20-11-2025 15:28:53: Profile not found for talent: 24
+[INFO] 20-11-2025 15:28:54: Processes retrieved: 0
+[WARN] 20-11-2025 15:28:56: Profile not found for talent: 24
+[WARN] 20-11-2025 15:28:57: Profile not found for talent: 24
+[INFO] 20-11-2025 15:28:57: CVs retrieved for talent: 24
+[INFO] 20-11-2025 15:28:58: Positions retrieved: 7
+[INFO] 20-11-2025 15:28:59: Processes retrieved: 0
+[INFO] 20-11-2025 15:29:00: Positions retrieved: 7
+[WARN] 20-11-2025 15:29:02: Profile not found for talent: 24
+[INFO] 20-11-2025 15:29:02: Processes retrieved: 0
+[WARN] 20-11-2025 15:29:12: Profile not found for talent: 24
+[WARN] 20-11-2025 15:29:14: Profile not found for talent: 24
+[INFO] 20-11-2025 15:29:15: Processes retrieved: 0
+[INFO] 23-11-2025 01:58:32: La base de datos ya fue inicializada, saltando procesos.
+[INFO] 23-11-2025 01:58:32: Indicator settings already exist for year 2025
+[INFO] 23-11-2025 01:58:32: Server ON http://localhost:3001
+[INFO] 23-11-2025 02:00:53: User logged in: admin@test.com
+[INFO] 23-11-2025 02:00:55: Admin stats retrieved
+[INFO] 23-11-2025 02:00:55: Indicator settings retrieved for year 2025
+[INFO] 23-11-2025 02:00:55: Processes retrieved: 8
+[INFO] 23-11-2025 02:00:55: Positions retrieved: 11
+[INFO] 23-11-2025 02:01:05: Processes retrieved: 8
+[INFO] 23-11-2025 02:01:06: Positions retrieved: 1
+[INFO] 23-11-2025 02:01:08: Positions retrieved: 1
+[INFO] 23-11-2025 02:01:22: Admin stats retrieved
+[INFO] 23-11-2025 02:01:22: Indicator settings retrieved for year 2025
+[INFO] 23-11-2025 02:01:22: Processes retrieved: 8
+[INFO] 23-11-2025 02:01:22: Positions retrieved: 11
+[INFO] 23-11-2025 02:01:23: Indicator settings retrieved for year 2025
+[INFO] 23-11-2025 02:01:36: Admin stats retrieved
+[INFO] 23-11-2025 02:01:36: Indicator settings retrieved for year 2025
+[INFO] 23-11-2025 02:01:36: Processes retrieved: 8
+[INFO] 23-11-2025 02:01:36: Positions retrieved: 11
+[INFO] 23-11-2025 02:02:45: User logged in: talent@test.com
+[INFO] 23-11-2025 02:02:45: Profile retrieved for talent: 5
+[INFO] 23-11-2025 02:02:45: Processes retrieved: 3
+[INFO] 23-11-2025 02:02:48: CVs retrieved for talent: 5
+[INFO] 23-11-2025 02:02:48: Profile retrieved for talent: 5
+[INFO] 23-11-2025 02:03:10: Profile retrieved for talent: 5
+[INFO] 23-11-2025 02:03:13: CVs retrieved for talent: 5
+[INFO] 23-11-2025 02:03:13: Profile retrieved for talent: 5
+[INFO] 23-11-2025 02:03:14: Profile retrieved for talent: 5
+[INFO] 23-11-2025 02:03:20: CVs retrieved for talent: 5
+[INFO] 23-11-2025 02:03:20: Profile retrieved for talent: 5
+[INFO] 23-11-2025 02:03:24: Profile retrieved for talent: 5
+[INFO] 23-11-2025 02:03:29: Profile picture uploaded for user: 5
+[INFO] 23-11-2025 02:03:29: Profile retrieved for talent: 5
+[INFO] 23-11-2025 02:04:27: Profile retrieved for talent: 5
+[INFO] 23-11-2025 02:04:27: Processes retrieved: 3

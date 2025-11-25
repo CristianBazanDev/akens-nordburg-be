@@ -23,19 +23,16 @@ const UploadController = {
         return;
       }
 
-      // Obtener usuario actual para eliminar foto anterior si existe
       const user = await prisma.user.findUnique({
         where: { id: userId },
       });
 
       if (!user) {
-        // Eliminar archivo subido si el usuario no existe
         deleteFile(req.file.path);
         res.status(404).json({ error: Messages.USER.NOT_FOUND });
         return;
       }
 
-      // Eliminar foto anterior si existe
       if (user.profilePicture) {
         const oldFileName = user.profilePicture.split('/').pop();
         if (oldFileName) {
@@ -44,7 +41,6 @@ const UploadController = {
         }
       }
 
-      // Guardar nueva URL de foto de perfil
       const fileUrl = getFileUrl(req.file.filename, 'profile');
       const updatedUser = await prisma.user.update({
         where: { id: userId },
@@ -88,7 +84,6 @@ const UploadController = {
         return;
       }
 
-      // Verificar que el usuario es un talento
       const user = await prisma.user.findUnique({
         where: { id: talentId },
         include: { rol: true },
@@ -106,7 +101,6 @@ const UploadController = {
         return;
       }
 
-      // Obtener última versión del CV
       const latestCV = await prisma.talentCV.findFirst({
         where: { talentId },
         orderBy: {
@@ -117,7 +111,6 @@ const UploadController = {
       const newVersion = latestCV ? latestCV.version + 1 : 1;
       const fileUrl = getFileUrl(req.file.filename, 'cv');
 
-      // Crear nuevo registro de CV
       const cv = await prisma.talentCV.create({
         data: {
           talentId,
@@ -127,7 +120,6 @@ const UploadController = {
         },
       });
 
-      // Actualizar el CV actual del usuario
       await prisma.user.update({
         where: { id: talentId },
         data: { currentCVId: cv.id },

@@ -6,7 +6,6 @@ import logger from '../services/logger';
 import { createNotification } from '../services/notifications';
 
 const ApplicationController = {
-  // Aplicar a una posición (talent)
   applyToPosition: async (req: AuthRequest, res: Response): Promise<void> => {
     try {
       const talentId = req.user?.userId;
@@ -20,7 +19,6 @@ const ApplicationController = {
 
       const positionIdNum = parseInt(positionId);
 
-      // Verificar que la posición existe y está publicada
       const position = await prisma.position.findUnique({
         where: { id: positionIdNum },
         include: { client: true },
@@ -36,7 +34,6 @@ const ApplicationController = {
         return;
       }
 
-      // Verificar que no haya aplicado antes
       const existingApplication = await prisma.application.findUnique({
         where: {
           positionId_talentId: {
@@ -51,7 +48,6 @@ const ApplicationController = {
         return;
       }
 
-      // Crear la aplicación
       const application = await prisma.application.create({
         data: {
           positionId: positionIdNum,
@@ -73,7 +69,6 @@ const ApplicationController = {
         },
       });
 
-      // Crear notificación para el cliente (dueño de la posición)
       await createNotification({
         userId: position.clientId,
         type: 'application_received',
@@ -83,7 +78,6 @@ const ApplicationController = {
         relatedType: 'application',
       });
 
-      // Crear notificación para el talento
       await createNotification({
         userId: talentId,
         type: 'application_submitted',
@@ -117,7 +111,6 @@ const ApplicationController = {
     }
   },
 
-  // Obtener aplicaciones de un talento
   getTalentApplications: async (req: AuthRequest, res: Response): Promise<void> => {
     try {
       const talentId = req.user?.userId;
@@ -166,7 +159,6 @@ const ApplicationController = {
     }
   },
 
-  // Obtener aplicaciones de una posición (para recruiter/client)
   getPositionApplications: async (req: AuthRequest, res: Response): Promise<void> => {
     try {
       const { positionId } = req.params;
@@ -179,7 +171,6 @@ const ApplicationController = {
 
       const positionIdNum = parseInt(positionId);
 
-      // Verificar que el usuario tiene acceso a esta posición
       const position = await prisma.position.findUnique({
         where: { id: positionIdNum },
       });
@@ -188,9 +179,6 @@ const ApplicationController = {
         res.status(404).json({ error: 'Posición no encontrada' });
         return;
       }
-
-      // Solo el cliente dueño de la posición o un recruiter puede ver las aplicaciones
-      // TODO: Agregar verificación de rol recruiter si es necesario
 
       const applications = await prisma.application.findMany({
         where: { positionId: positionIdNum },
@@ -230,7 +218,6 @@ const ApplicationController = {
     }
   },
 
-  // Iniciar proceso desde una aplicación (recruiter)
   startProcessFromApplication: async (req: AuthRequest, res: Response): Promise<void> => {
     try {
       const { applicationId } = req.params;
@@ -243,7 +230,6 @@ const ApplicationController = {
 
       const applicationIdNum = parseInt(applicationId);
 
-      // Obtener la aplicación
       const application = await prisma.application.findUnique({
         where: { id: applicationIdNum },
         include: {
@@ -261,7 +247,6 @@ const ApplicationController = {
         return;
       }
 
-      // Verificar que no exista ya un proceso para esta posición y talento
       const existingProcess = await prisma.process.findFirst({
         where: {
           positionId: application.positionId,
@@ -278,7 +263,6 @@ const ApplicationController = {
         return;
       }
 
-      // Crear el proceso
       const process = await prisma.process.create({
         data: {
           title: `Proceso: ${application.position.title} - ${application.talent.name}`,
@@ -290,7 +274,6 @@ const ApplicationController = {
         },
       });
 
-      // Crear etapa inicial
       const initialStage = await prisma.processStage.create({
         data: {
           name: 'Inicial',
@@ -299,7 +282,6 @@ const ApplicationController = {
         },
       });
 
-      // Agregar el candidato al proceso
       await prisma.processCandidate.create({
         data: {
           processId: process.id,
@@ -309,13 +291,11 @@ const ApplicationController = {
         },
       });
 
-      // Actualizar el estado de la aplicación
       await prisma.application.update({
         where: { id: applicationIdNum },
         data: { status: 'accepted' },
       });
 
-      // Crear notificación para el talento
       await createNotification({
         userId: application.talentId,
         type: 'process_started',

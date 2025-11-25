@@ -80,7 +80,6 @@ export const initializeIndicators = async () => {
   try {
     const currentYear = new Date().getFullYear();
     
-    // Verificar si ya existe una configuración para el año actual
     const existingSetting = await prisma.indicatorSetting.findFirst({
       where: {
         year: currentYear,
@@ -93,7 +92,6 @@ export const initializeIndicators = async () => {
       return;
     }
 
-    // Crear la configuración para el año actual
     const setting = await prisma.indicatorSetting.create({
       data: {
         year: currentYear,
@@ -101,7 +99,6 @@ export const initializeIndicators = async () => {
       },
     });
 
-    // Crear los indicadores por defecto
     const indicatorData = INDICATOR_DEFINITIONS.map((ind) => ({
       indicatorSettingId: setting.id,
       type: ind.type,
@@ -127,6 +124,8 @@ export const initializeIndicators = async () => {
     throw error;
   }
 };
+
+
 
 
 

@@ -8,26 +8,40 @@ datasource db {
 }
 
 model Config {
-  id    Int  @id @default(autoincrement())
-  clientVerbose String      
-  firstInitialize Boolean   @default(false)
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
+  id              Int     @id @default(autoincrement())
+  tenant          String  @unique
+  clientId        String  @unique
+  clientVerbose   String
+  logoUrl         String?
+  isActive        Boolean @default(true)
+  firstInitialize Boolean @default(false)
+  primaryColor       String?
+  secondaryColor     String?
+  accentColor        String?
+  backgroundColor    String?
+  textColor          String?
+  textSecondaryColor String?
+  themeConfig Json?
+  metadata Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([tenant])
+  @@index([clientId])
+  @@index([isActive])
 }
 
 model User {
-  id             Int      @id @default(autoincrement())
+  id             Int       @id @default(autoincrement())
   name           String
-  email          String   @unique
+  email          String    @unique
   password       String
   profilePicture String?
   currentCVId    Int?
   currentCV      TalentCV? @relation("UserCurrentCV", fields: [currentCVId], references: [id], onDelete: SetNull)
-  rol            Rol      @relation(fields: [rolId], references: [id])
+  rol            Rol       @relation(fields: [rolId], references: [id])
   rolId          Int
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
-  
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
   positionsAsClient    Position[]         @relation("ClientPositions")
   processesAsClient    Process[]          @relation("ClientProcesses")
   processesAsRecruiter Process[]          @relation("RecruiterProcesses")
@@ -39,28 +53,27 @@ model User {
 }
 
 model Rol {
-  id          Int     @id @default(autoincrement())
-  description String  @unique
+  id          Int    @id @default(autoincrement())
+  description String @unique
   users       User[]
 }
 
 model Position {
-  id          Int      @id @default(autoincrement())
-  title       String
-  description String
+  id           Int      @id @default(autoincrement())
+  title        String
+  description  String
   requirements String[]
-  location    String?
-  salaryMin   Float?
-  salaryMax   Float?
-  currency    String?  @default("USD")
-  clientId    Int
-  client      User     @relation("ClientPositions", fields: [clientId], references: [id])
-  status      String   @default("draft")
-  keywords    String[]
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  
-  processes   Process[]
+  location     String?
+  salaryMin    Float?
+  salaryMax    Float?
+  currency     String?  @default("USD")
+  clientId     Int
+  client       User     @relation("ClientPositions", fields: [clientId], references: [id])
+  status       String   @default("draft")
+  keywords     String[]
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  processes    Process[]
   applications Application[]
 }
 
@@ -77,9 +90,8 @@ model Process {
   client      User     @relation("ClientProcesses", fields: [clientId], references: [id])
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
-  
-  stages      ProcessStage[]
-  candidates  ProcessCandidate[]
+  stages     ProcessStage[]
+  candidates ProcessCandidate[]
 }
 
 model ProcessStage {
@@ -89,22 +101,21 @@ model ProcessStage {
   processId Int
   process   Process  @relation(fields: [processId], references: [id], onDelete: Cascade)
   createdAt DateTime @default(now())
-  
   candidates ProcessCandidate[]
 }
 
 model ProcessCandidate {
-  id        Int      @id @default(autoincrement())
+  id        Int          @id @default(autoincrement())
   processId Int
-  process   Process  @relation(fields: [processId], references: [id], onDelete: Cascade)
+  process   Process      @relation(fields: [processId], references: [id], onDelete: Cascade)
   talentId  Int
-  talent    User     @relation(fields: [talentId], references: [id])
+  talent    User         @relation(fields: [talentId], references: [id])
   stageId   Int
   stage     ProcessStage @relation(fields: [stageId], references: [id])
-  status    String   @default("pending")
+  status    String       @default("pending")
   notes     String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
 }
 
 model TalentProfile {
@@ -126,33 +137,31 @@ model TalentCV {
   fileName   String
   version    Int      @default(1)
   uploadedAt DateTime @default(now())
-  
   usersWithCurrentCV User[] @relation("UserCurrentCV")
 }
 
 model MonthlyGoal {
-  id             Int      @id @default(autoincrement())
-  month          Int
-  year           Int
+  id              Int      @id @default(autoincrement())
+  month           Int
+  year            Int
   targetProcesses Int
-  targetHires    Int
-  actualProcesses Int     @default(0)
-  actualHires    Int      @default(0)
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
-  
+  targetHires     Int
+  actualProcesses Int      @default(0)
+  actualHires     Int      @default(0)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
   @@unique([month, year])
 }
 
 model AnnualGoal {
-  id             Int      @id @default(autoincrement())
-  year           Int      @unique
+  id              Int      @id @default(autoincrement())
+  year            Int      @unique
   targetProcesses Int
-  targetHires    Int
-  actualProcesses Int     @default(0)
-  actualHires    Int      @default(0)
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
+  targetHires     Int
+  actualProcesses Int      @default(0)
+  actualHires     Int      @default(0)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
 }
 
 model IndicatorSetting {
@@ -161,26 +170,23 @@ model IndicatorSetting {
   month     Int?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  
   indicators IndicatorConfig[]
-  
   @@unique([year, month])
 }
 
 model IndicatorConfig {
-  id                Int      @id @default(autoincrement())
+  id                 Int              @id @default(autoincrement())
   indicatorSettingId Int
-  indicatorSetting  IndicatorSetting @relation(fields: [indicatorSettingId], references: [id], onDelete: Cascade)
-  type              String
-  name              String
-  description       String?
-  enabled           Boolean  @default(false)
-  monthlyTarget     Float?
-  annualTarget      Float?
-  unit              String   @default("")
-  createdAt         DateTime @default(now())
-  updatedAt         DateTime @updatedAt
-  
+  indicatorSetting   IndicatorSetting @relation(fields: [indicatorSettingId], references: [id], onDelete: Cascade)
+  type               String
+  name               String
+  description        String?
+  enabled            Boolean          @default(false)
+  monthlyTarget      Float?
+  annualTarget       Float?
+  unit               String           @default("")
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
   @@unique([indicatorSettingId, type])
 }
 
@@ -190,28 +196,26 @@ model Application {
   position    Position @relation(fields: [positionId], references: [id], onDelete: Cascade)
   talentId    Int
   talent      User     @relation(fields: [talentId], references: [id], onDelete: Cascade)
-  status      String   @default("pending") // pending, reviewed, accepted, rejected
+  status      String   @default("pending")
   coverLetter String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
-
   @@unique([positionId, talentId])
   @@index([positionId])
   @@index([talentId])
 }
 
 model Notification {
-  id         Int      @id @default(autoincrement())
-  userId     Int
-  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  type       String   // application_received, application_status, process_started, etc.
-  title      String
-  message    String
-  relatedId  Int?     // ID del recurso relacionado (application, process, etc.)
-  relatedType String? // Tipo del recurso relacionado
-  read       Boolean  @default(false)
-  createdAt  DateTime @default(now())
-
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type        String
+  title       String
+  message     String
+  relatedId   Int?
+  relatedType String?
+  read        Boolean  @default(false)
+  createdAt   DateTime @default(now())
   @@index([userId])
   @@index([read])
 }

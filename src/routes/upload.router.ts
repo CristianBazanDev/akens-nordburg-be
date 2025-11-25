@@ -5,7 +5,6 @@ import { uploadProfilePicture, uploadCV } from '../middleware/upload';
 
 const router = Router();
 
-// Subir foto de perfil
 router.put(
   '/users/:id/profile-picture',
   authMiddleware,
@@ -13,7 +12,6 @@ router.put(
   UploadController.uploadProfilePicture
 );
 
-// Subir CV
 router.post(
   '/talents/:id/cvs/upload',
   authMiddleware,

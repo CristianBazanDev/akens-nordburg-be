@@ -3,7 +3,6 @@ import path from 'path';
 import fs from 'fs';
 import { Request } from 'express';
 
-// Crear carpetas si no existen
 const uploadsDir = path.join(process.cwd(), 'uploads');
 const profilePicturesDir = path.join(uploadsDir, 'profile-pictures');
 const cvsDir = path.join(uploadsDir, 'cvs');
@@ -14,7 +13,6 @@ const cvsDir = path.join(uploadsDir, 'cvs');
   }
 });
 
-// Configuración para fotos de perfil
 const profilePictureStorage = multer.diskStorage({
   destination: (_req, _file, cb) => {
     cb(null, profilePicturesDir);
@@ -26,7 +24,6 @@ const profilePictureStorage = multer.diskStorage({
   },
 });
 
-// Configuración para CVs
 const cvStorage = multer.diskStorage({
   destination: (_req, _file, cb) => {
     cb(null, cvsDir);
@@ -38,7 +35,6 @@ const cvStorage = multer.diskStorage({
   },
 });
 
-// Filtros de archivos
 const imageFilter = (_req: Request, file: Express.Multer.File, cb: multer.FileFilterCallback) => {
   const allowedMimes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/webp'];
   if (allowedMimes.includes(file.mimetype)) {
@@ -61,7 +57,6 @@ const documentFilter = (_req: Request, file: Express.Multer.File, cb: multer.Fil
   }
 };
 
-// Middlewares de multer
 export const uploadProfilePicture = multer({
   storage: profilePictureStorage,
   limits: {
@@ -78,16 +73,13 @@ export const uploadCV = multer({
   fileFilter: documentFilter,
 });
 
-// Función helper para obtener la URL del archivo
 export const getFileUrl = (filename: string, type: 'profile' | 'cv'): string => {
-  // Usar el puerto del servidor o el API_BASE_URL si está configurado
   const port = process.env.PORT || '3000';
   const baseUrl = process.env.API_BASE_URL || `http://localhost:${port}`;
   const folder = type === 'profile' ? 'profile-pictures' : 'cvs';
   return `${baseUrl}/uploads/${folder}/${filename}`;
 };
 
-// Función helper para eliminar archivo
 export const deleteFile = (filePath: string): void => {
   if (fs.existsSync(filePath)) {
     fs.unlinkSync(filePath);

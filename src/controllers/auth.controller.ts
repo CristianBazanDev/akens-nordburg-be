@@ -20,10 +20,8 @@ const AuthController = {
         return;
       }
 
-      // Por defecto, asignar rol de "talent" si no se proporciona
       const roleToAssign = role || 'talent';
 
-      // Buscar el rol en la base de datos
       const roleRecord = await prisma.rol.findUnique({
         where: { description: roleToAssign },
       });

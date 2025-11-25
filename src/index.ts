@@ -29,10 +29,8 @@ console.log(PORT)
 
 app.use(express.json());
 
-// Configuración de CORS
 const corsOptions = {
   origin: function (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) {
-    // Permitir requests sin origin (como mobile apps o curl requests)
     if (!origin) return callback(null, true);
     
     const allowedOrigins = [
@@ -56,7 +54,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-// Middleware para manejar OPTIONS requests en /uploads (debe ir ANTES del static)
 app.use('/uploads', (req, res, next) => {
   if (req.method === 'OPTIONS') {
     const origin = req.headers.origin;
@@ -83,12 +80,9 @@ app.use('/uploads', (req, res, next) => {
   next();
 });
 
-// Servir archivos estáticos desde la carpeta uploads
-// IMPORTANTE: Esto debe ir ANTES de las rutas de API
 const uploadsPath = path.join(process.cwd(), 'uploads');
 app.use('/uploads', express.static(uploadsPath, {
   setHeaders: (res, filePath) => {
-    // Headers CORS para archivos estáticos
     const origin = res.req.headers.origin;
     const allowedOrigins = [
       process.env.FE_URL,
@@ -109,7 +103,6 @@ app.use('/uploads', express.static(uploadsPath, {
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     res.setHeader('Cache-Control', 'public, max-age=31536000');
     
-    // Asegurar que las imágenes se sirvan con el tipo MIME correcto
     if (filePath.endsWith('.png')) {
       res.setHeader('Content-Type', 'image/png');
     } else if (filePath.endsWith('.jpg') || filePath.endsWith('.jpeg')) {
@@ -138,7 +131,12 @@ app.use('/api/notifications', NotificationRouter);
 
 async function main() {
   try {
-    const config = await prisma.config.findFirst()
+    const DEFAULT_TENANT = process.env.DEFAULT_TENANT || 'default';
+    const DEFAULT_CLIENT_ID = process.env.DEFAULT_CLIENT_ID || 'main-client';
+    
+    let config = await prisma.config.findFirst({
+      where: { tenant: DEFAULT_TENANT }
+    })
 
     if (!config?.firstInitialize) {
       logger.info("Primera inicialización de la base de datos")
@@ -154,18 +152,28 @@ async function main() {
       if (config) {
         await prisma.config.update({
           where: {id: config.id}, 
-          data: {firstInitialize: true},
+          data: {
+            firstInitialize: true,
+            isActive: true,
+          },
         })
 
         logger.info("Inicialización completa")
       } else {
-        await prisma.config.create({ data: { firstInitialize: true, clientVerbose: '' } });
+        await prisma.config.create({ 
+          data: { 
+            tenant: DEFAULT_TENANT,
+            clientId: DEFAULT_CLIENT_ID,
+            clientVerbose: 'Main Tenant',
+            firstInitialize: true,
+            isActive: true,
+          } 
+        });
         logger.info("Config creado e inicialización completa")
       }
       
     } else {
       logger.info("La base de datos ya fue inicializada, saltando procesos.")
-      // Inicializar indicadores si no existen para el año actual
       await initializeIndicators()
     }
 
